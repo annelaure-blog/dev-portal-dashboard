@@ -19,11 +19,15 @@ BRANCH = "2026.01"
 
 PROJECTS = [
     {
+        "slug": "retail-media",
         "name": "Retail Media",
+        "label": "Retail Media API",
         "token_env": "README_TOKEN_RETAIL_MEDIA",
     },
     {
+        "slug": "marketing-solutions",
         "name": "Marketing Solutions",
+        "label": "Marketing Solutions API",
         "token_env": "README_TOKEN_MARKETING_SOLUTIONS_STABLE",
     },
 ]
@@ -60,13 +64,14 @@ def normalize_items(data: Any) -> List[Dict[str, Any]]:
     return data if isinstance(data, list) else []
 
 
-def check_project(project: Dict[str, str], now: datetime) -> Dict[str, Any]:
+def check_project(slug: str, project: Dict[str, str], now: datetime) -> Dict[str, Any]:
     name = project["name"]
+    label = project.get("label", name)
     token = os.getenv(project["token_env"], "")
 
     if not token:
         print(f"  ⚠️  No token for {name} ({project['token_env']} not set) — skipping.")
-        return {"name": name, "error": "missing token"}
+        return {"label": label, "error": "missing token"}
 
     url = f"{BASE_URL}/branches/{BRANCH}/apis"
     data = request_json(url, token)
@@ -86,19 +91,13 @@ def check_project(project: Dict[str, str], now: datetime) -> Dict[str, Any]:
     )
 
     if not enriched:
-        return {"name": name, "branch": BRANCH, "error": "no API definitions found"}
+        return {"label": label, "branch": BRANCH, "error": "no API definitions found"}
 
-    newest_dt, newest = enriched[0]
+    newest_dt, _ = enriched[0]
     return {
-        "name": name,
-        "branch": BRANCH,
-        "latest": {
-            "filename": newest.get("filename") or newest.get("name") or "(unknown)",
-            "title": newest.get("title") or newest.get("display_name") or "",
-            "last_updated": newest_dt.isoformat() if newest_dt else None,
-            "days_since": (now - newest_dt).days if newest_dt else None,
-        },
-        "count": len(enriched),
+        "label": label,
+        "last_updated": newest_dt.isoformat() if newest_dt else None,
+        "days_since": (now - newest_dt).days if newest_dt else None,
     }
 
 
@@ -108,20 +107,19 @@ def main() -> None:
     args = parser.parse_args()
 
     now = datetime.now(timezone.utc)
-    results = []
+    projects_out: Dict[str, Any] = {}
 
     for project in PROJECTS:
+        slug = project["slug"]
         print(f"\n🔍 Checking {project['name']}…")
-        result = check_project(project, now)
-        results.append(result)
+        result = check_project(slug, project, now)
+        projects_out[slug] = result
 
         if "error" not in result:
-            latest = result["latest"]
-            print(f"   Latest file : {latest['filename']}")
-            print(f"   Last updated: {latest['last_updated']}")
-            print(f"   Days since  : {latest['days_since']}")
+            print(f"   Last updated: {result['last_updated']}")
+            print(f"   Days since  : {result['days_since']}")
 
-    output = {"generated_at": now.isoformat(), "projects": results}
+    output = {"branch": BRANCH, "generated_at": now.isoformat(), "projects": projects_out}
 
     if args.json_out:
         with open(args.json_out, "w", encoding="utf-8") as f:
