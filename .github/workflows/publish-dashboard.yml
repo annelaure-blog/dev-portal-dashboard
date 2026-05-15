@@ -46,6 +46,21 @@ jobs:
           python scripts/oas_guide_coverage.py --json-out UI/oas_guide_coverage.json || true
           python scripts/broken_links_api.py --json-out UI/broken_links.json || true
 
+      - name: Save snapshot
+        run: |
+          DATE=$(date -u +%Y-%m-%d)
+          SNAPSHOT_DIR="snapshots/$DATE"
+          mkdir -p "$SNAPSHOT_DIR"
+          cp UI/pages.json UI/pages_reference.json UI/page_views.json \
+             UI/top_pages.json UI/search_terms.json UI/freshness.json \
+             UI/oas_guide_coverage.json UI/broken_links.json \
+             "$SNAPSHOT_DIR/" 2>/dev/null || true
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add snapshots/
+          git diff --cached --quiet || git commit -m "snapshot: $DATE"
+          git push
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

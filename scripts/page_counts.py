@@ -31,13 +31,13 @@ PROJECTS = {
         "branch": "v2026-preview",
         "label": "Retail Media API (preview)",
     },
-    "cms-stable": {
-        "token_env": "README_TOKEN_CMS_STABLE",
+    "retailer-integration-stable": {
+        "token_env": "README_TOKEN_RETAILER_INTEGRATION",
         "branch": "v2025.10",
         "label": "Retailer Integration (stable)",
     },
-    "cms-preview": {
-        "token_env": "README_TOKEN_CMS_PREVIEW",
+    "retailer-integration-preview": {
+        "token_env": "README_TOKEN_RETAILER_INTEGRATION",
         "branch": "v2026.01",
         "label": "Retailer Integration (preview)",
     },

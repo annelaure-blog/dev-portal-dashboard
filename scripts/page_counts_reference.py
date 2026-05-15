@@ -31,6 +31,16 @@ PROJECTS = {
         "branch": "v2026-preview",
         "label": "Retail Media API (preview)",
     },
+    "retailer-integration-stable": {
+        "token_env": "README_TOKEN_RETAILER_INTEGRATION",
+        "branch": "v2025.10",
+        "label": "Retailer Integration (stable)",
+    },
+    "retailer-integration-preview": {
+        "token_env": "README_TOKEN_RETAILER_INTEGRATION",
+        "branch": "v2026.01",
+        "label": "Retailer Integration (preview)",
+    },
     "marketing-solutions": {
         "token_env": "README_TOKEN_MARKETING_SOLUTIONS_STABLE",
         "branch": "v2026.01",
