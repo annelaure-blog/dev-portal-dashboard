@@ -15,20 +15,35 @@ from typing import Any, Dict, List, Optional
 import requests
 
 BASE_URL = "https://api.readme.com/v2"
-BRANCH = "2026.01"
 
 PROJECTS = [
     {
-        "slug": "retail-media",
-        "name": "Retail Media",
-        "label": "Retail Media API",
+        "slug": "retail-media-stable",
+        "name": "Retail Media (stable)",
+        "label": "Retail Media API (stable)",
         "token_env": "README_TOKEN_RETAIL_MEDIA",
+        "branch": "v2026.01",
     },
     {
-        "slug": "marketing-solutions",
-        "name": "Marketing Solutions",
-        "label": "Marketing Solutions API",
+        "slug": "retail-media-preview",
+        "name": "Retail Media (preview)",
+        "label": "Retail Media API (preview)",
+        "token_env": "README_TOKEN_RETAIL_MEDIA_PREVIEW",
+        "branch": "v2026-preview",
+    },
+    {
+        "slug": "marketing-solutions-stable",
+        "name": "Marketing Solutions (stable)",
+        "label": "Marketing Solutions API (stable)",
         "token_env": "README_TOKEN_MARKETING_SOLUTIONS_STABLE",
+        "branch": "v2026.01",
+    },
+    {
+        "slug": "marketing-solutions-preview",
+        "name": "Marketing Solutions (preview)",
+        "label": "Marketing Solutions API (preview)",
+        "token_env": "README_TOKEN_MARKETING_SOLUTIONS_PREVIEW",
+        "branch": "v2026-preview",
     },
 ]
 
@@ -73,7 +88,8 @@ def check_project(slug: str, project: Dict[str, str], now: datetime) -> Dict[str
         print(f"  ⚠️  No token for {name} ({project['token_env']} not set) — skipping.")
         return {"label": label, "error": "missing token"}
 
-    url = f"{BASE_URL}/branches/{BRANCH}/apis"
+    branch = project["branch"]
+    url = f"{BASE_URL}/branches/{branch}/apis"
     data = request_json(url, token)
     items = normalize_items(data)
 
@@ -91,11 +107,12 @@ def check_project(slug: str, project: Dict[str, str], now: datetime) -> Dict[str
     )
 
     if not enriched:
-        return {"label": label, "branch": BRANCH, "error": "no API definitions found"}
+        return {"label": label, "branch": branch, "error": "no API definitions found"}
 
     newest_dt, _ = enriched[0]
     return {
         "label": label,
+        "branch": branch,
         "last_updated": newest_dt.isoformat() if newest_dt else None,
         "days_since": (now - newest_dt).days if newest_dt else None,
     }
@@ -119,7 +136,7 @@ def main() -> None:
             print(f"   Last updated: {result['last_updated']}")
             print(f"   Days since  : {result['days_since']}")
 
-    output = {"branch": BRANCH, "generated_at": now.isoformat(), "projects": projects_out}
+    output = {"generated_at": now.isoformat(), "projects": projects_out}
 
     if args.json_out:
         with open(args.json_out, "w", encoding="utf-8") as f:
