@@ -1,0 +1,16 @@
+{
+  "branch": "2026.01",
+  "generated_at": "2026-05-15T16:06:20.775030+00:00",
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "last_updated": "2026-03-31T18:33:52.389000+00:00",
+      "days_since": 44
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "last_updated": "2026-05-05T11:20:26.589000+00:00",
+      "days_since": 10
+    }
+  }
+}
