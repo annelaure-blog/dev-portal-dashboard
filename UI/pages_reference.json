@@ -1,0 +1,29 @@
+{
+  "projects": {
+    "retail-media-stable": {
+      "branch": "v2026.01",
+      "label": "Retail Media API (stable)",
+      "reference": 120,
+      "total": 120
+    },
+    "retail-media-preview": {
+      "branch": "v2026-preview",
+      "label": "Retail Media API (preview)",
+      "reference": 91,
+      "total": 91
+    },
+    "marketing-solutions": {
+      "branch": "v2026.01",
+      "label": "Marketing Solutions (stable)",
+      "reference": 111,
+      "total": 111
+    },
+    "marketing-solutions-preview": {
+      "branch": "v2026-preview",
+      "label": "Marketing Solutions (preview)",
+      "reference": 119,
+      "total": 119
+    }
+  },
+  "grand_total": 441
+}

@@ -1,0 +1,1149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Criteo Developer Portal Metrics</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #000000;
+      --muted: #444444;
+      --radius: 10px;
+      --font: "Courier New", "Consolas", "SFMono-Regular", monospace;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: var(--font);
+      color: var(--text);
+      background: var(--bg);
+      padding: 32px 16px 48px;
+    }
+    .frame {
+      width: min(1280px, 100%);
+      background: #fff;
+      border: none;
+      border-radius: var(--radius);
+      padding: 24px;
+      margin: 0 auto;
+      position: relative;
+    }
+    header {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      margin-bottom: 12px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 24px;
+      letter-spacing: 0;
+    }
+    .tag {
+      padding: 6px 12px;
+      border-radius: 999px;
+      border: 1px solid #000;
+      color: var(--text);
+      font-size: 13px;
+      background: #fff;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 18px;
+      margin-top: 20px;
+    }
+    .card {
+      background: #fff;
+      border-radius: var(--radius);
+      padding: 16px 16px 14px;
+      border: 2px solid #000;
+    }
+    .label {
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+    .value {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 0 0 4px;
+    }
+    .sub {
+      color: var(--muted);
+      font-size: 14px;
+      margin: 0;
+    }
+    .list {
+      margin-top: 8px;
+      display: grid;
+      gap: 6px;
+    }
+    .row {
+      font-size: 14px;
+      color: var(--text);
+    }
+    table.metric-table,
+    table.top-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+    table.metric-table th,
+    table.metric-table td,
+    table.top-table th,
+    table.top-table td {
+      border: 1px solid #000;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    table.metric-table th,
+    table.top-table th {
+      background: #f8f8f8;
+      font-weight: 700;
+    }
+    table.metric-table td strong,
+    table.top-table td strong {
+      font-weight: 700;
+    }
+    .row strong {
+      font-weight: 700;
+    }
+    .top-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 8px;
+      font-size: 14px;
+    }
+    .top-table th,
+    .top-table td {
+      border: 1px solid #000;
+      padding: 6px 8px;
+      text-align: left;
+    }
+    .top-table th {
+      background: #f8f8f8;
+      font-weight: 700;
+    }
+    .card.wide {
+      grid-column: 1 / -1;
+    }
+    .chart {
+      margin-top: 12px;
+      border: 1px solid #000;
+      border-radius: 8px;
+      padding: 8px;
+      width: 100%;
+    }
+    .chart svg {
+      width: 100%;
+      height: auto;
+    }
+    .card.tall {
+      grid-row: span 2;
+    }
+    .top-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 12px;
+    }
+    .inline {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .muted {
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 12px;
+      color: var(--text);
+      padding: 6px 10px;
+      border-radius: 10px;
+      background: #fff;
+      border: 1px solid #000;
+    }
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .pac-banner {
+      position: absolute;
+      top: 8px;
+      right: 12px;
+      width: 220px;
+      height: 32px;
+      pointer-events: none;
+      opacity: 0.85;
+    }
+    .pac-track {
+      position: absolute;
+      top: 10px;
+      left: 16px;
+      right: -10px;
+      height: 8px;
+      background: repeating-linear-gradient(
+        90deg,
+        #000 0,
+        #000 6px,
+        transparent 6px,
+        transparent 12px
+      );
+      opacity: 0.8;
+    }
+    .pacman {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 30px;
+      background: #000;
+      border-radius: 50%;
+      animation: pac-run 6s linear infinite;
+      overflow: hidden;
+    }
+    .pacman::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: var(--bg);
+      border-radius: 50%;
+      animation: pac-mouth 0.6s ease-in-out infinite;
+    }
+    .pacman::before {
+      content: "";
+      position: absolute;
+      top: 7px;
+      left: 18px;
+      width: 3px;
+      height: 3px;
+      background: #fff;
+      border-radius: 1px;
+      z-index: 1;
+      animation: pac-eye 4s linear infinite;
+    }
+    @keyframes pac-run {
+      0% { transform: translateX(0) scaleX(1); }
+      49.9% { transform: translateX(180px) scaleX(1); }
+      50% { transform: translateX(180px) scaleX(-1); }
+      100% { transform: translateX(0) scaleX(-1); }
+    }
+    @keyframes pac-mouth {
+      0% { clip-path: polygon(50% 50%, 100% 20%, 100% 80%); }
+      50% { clip-path: polygon(50% 50%, 100% 20%, 100% 80%); }
+      100% { clip-path: polygon(50% 50%, 100% 50%, 100% 50%); }
+    }
+    @keyframes pac-eye {
+      0% { transform: translateX(0); }
+      49.9% { transform: translateX(0); }
+      50% { transform: translateX(-12px); }
+      100% { transform: translateX(-12px); }
+    }
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #f97316;
+      box-shadow: none;
+    }
+    .error {
+      color: #000;
+      font-weight: 700;
+    }
+    @media (max-width: 640px) {
+      body { padding: 24px 12px; }
+      .frame { padding: 20px; }
+      h1 { font-size: 20px; }
+      .value { font-size: 20px; }
+      .card.wide { grid-column: span 1; }
+    }
+  </style>
+</head>
+<body>
+  <div class="frame">
+    <div class="pac-banner">
+      <div class="pac-track"></div>
+      <div class="pacman"></div>
+    </div>
+    <header>
+      <h1>Criteo Retail Media Developer Portal Metrics</h1>
+      <span class="tag">Local dashboard</span>
+    </header>
+    <div class="inline">
+      <div class="status">
+        <span class="dot" id="status-dot"></span>
+        <span class="muted" id="status-text">Loading latest OAS update…</span>
+      </div>
+      <span class="badge" id="branch-badge">—</span>
+    </div>
+
+    <div class="grid" id="cards" style="display:none;">
+      <div class="card">
+        <div class="label">Open API Spec Freshness</div>
+        <p class="value" id="last-updated">Last OAS update</p>
+        <p class="sub" id="days-since" style="display:none;">—</p>
+        <div id="freshness-table-container"></div>
+      </div>
+      <div class="card">
+        <div class="label">Live documentation pages</div>
+        <p class="value" id="pages-total">—</p>
+        <div id="pages-table-container"></div>
+      </div>
+      <div class="card">
+        <div class="label">API reference pages</div>
+        <p class="value" id="refs-total">—</p>
+        <div id="refs-table-container"></div>
+      </div>
+      <div class="card wide">
+        <div class="label">Endpoint Documentation Coverage</div>
+        <p class="value" id="oas-title">—</p>
+        <div id="oas-table-container"></div>
+        <div id="oas-missing-container" class="list"></div>
+      </div>
+      <div class="card wide">
+        <div class="label">Page views (per project)</div>
+        <p class="value" id="views-title">—</p>
+        <div id="views-table-container"></div>
+      </div>
+      <div class="card wide">
+        <div class="label">Unique page views (longitudinal)</div>
+        <p class="value" id="unique-title">—</p>
+        <div id="unique-chart-container" class="chart"></div>
+        <div id="unique-table-container"></div>
+      </div>
+      <div class="card wide">
+        <div class="label">Page engagement</div>
+        <p class="value" id="top-title">Top 10 pages per project (unique views, last 365 days)</p>
+        <div id="top-table-container" class="top-grid"></div>
+      </div>
+      <div class="card wide">
+        <div class="label">Top search terms (last 90 days)</div>
+        <p class="value" id="search-title">Top 10 queries</p>
+        <div id="search-table-container"></div>
+      </div>
+
+      <div class="card wide">
+        <div class="label">Broken links checks</div>
+        <p class="value" id="broken-title">Script in progress</p>
+        <div id="broken-grid-container" class="top-grid"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function formatElapsed(ms) {
+      const totalSeconds = Math.max(0, Math.floor(ms / 1000));
+      const days = Math.floor(totalSeconds / 86400);
+      const hours = Math.floor((totalSeconds % 86400) / 3600);
+      const minutes = Math.floor((totalSeconds % 3600) / 60);
+      const seconds = totalSeconds % 60;
+      const parts = [];
+      if (days > 0) parts.push(`${days}d`);
+      if (hours > 0 || days > 0) parts.push(`${hours}h`);
+      parts.push(`${minutes}m`);
+      parts.push(`${seconds}s`);
+      return { days, label: parts.join(" ") };
+    }
+
+    async function loadFreshness() {
+      const statusText = document.getElementById("status-text");
+      const statusDot = document.getElementById("status-dot");
+      const branchBadge = document.getElementById("branch-badge");
+      const cards = document.getElementById("cards");
+
+      try {
+        const res = await fetch("./freshness.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+
+        const projects = data.projects || {};
+        const entries = Object.entries(projects);
+        if (entries.length) {
+          const first = entries[0][1] || {};
+          const updated = first.last_updated ? new Date(first.last_updated) : null;
+          document.getElementById("last-updated").textContent = "Last OAS update";
+          let displayDays = null;
+          if (updated) {
+            const diffMs = Date.now() - updated.getTime();
+            displayDays = Math.floor(diffMs / 86400000);
+          }
+        }
+
+        branchBadge.textContent = data.branch ? `Branch ${data.branch}` : "Branch n/a";
+
+        // Build table
+        const table = document.createElement("table");
+        table.className = "metric-table";
+        const thead = document.createElement("thead");
+        const hr = document.createElement("tr");
+        ["Project", "Last updated", "Days since"].forEach((col) => {
+          const th = document.createElement("th");
+          th.textContent = col;
+          hr.appendChild(th);
+        });
+        thead.appendChild(hr);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        entries.forEach(([key, proj]) => {
+          const tr = document.createElement("tr");
+          const label = proj.label || key;
+          const updated = proj.last_updated ? new Date(proj.last_updated) : null;
+          let daysSince = null;
+          if (updated) {
+            const diffMs = Date.now() - updated.getTime();
+            daysSince = Math.floor(diffMs / 86400000);
+          }
+
+          [label, updated ? updated.toLocaleString() : "Unknown", daysSince != null ? `${daysSince}` : "—"].forEach((val) => {
+            const td = document.createElement("td");
+            if (typeof val === "number") {
+              td.innerHTML = `<strong>${val.toLocaleString("fr-FR")}</strong>`;
+            } else {
+              td.textContent = val;
+            }
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        const freshContainer = document.getElementById("freshness-table-container");
+        freshContainer.innerHTML = "";
+        freshContainer.appendChild(table);
+
+        statusText.textContent = "Live metric loaded";
+        statusDot.style.background = "#22c55e";
+        statusDot.style.boxShadow = "0 0 0 6px rgba(34,197,94,0.12)";
+        cards.style.display = "grid";
+      } catch (err) {
+        statusText.innerHTML = `<span class="error">Could not load freshness.json</span>`;
+        statusDot.style.background = "#f97316";
+        statusDot.style.boxShadow = "0 0 0 6px rgba(249,115,22,0.12)";
+      }
+    }
+
+    async function loadPageCounts() {
+      try {
+        const res = await fetch("./pages.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const projects = data.projects || {};
+        const grand = data.grand_total;
+        const entries = Object.entries(projects).filter(
+          ([, proj]) => typeof proj?.total === "number"
+        );
+
+        document.getElementById("pages-total").textContent =
+          typeof grand === "number" ? `Total published pages: ${grand}` : "—";
+        const container = document.getElementById("pages-table-container");
+        if (!entries.length) {
+          container.innerHTML = "No project counts loaded";
+        } else {
+          const table = document.createElement("table");
+          table.className = "metric-table";
+          const thead = document.createElement("thead");
+          const hr = document.createElement("tr");
+          ["Project", "Branch", "Pages"].forEach((col) => {
+            const th = document.createElement("th");
+            th.textContent = col;
+            hr.appendChild(th);
+          });
+          thead.appendChild(hr);
+          table.appendChild(thead);
+
+          const tbody = document.createElement("tbody");
+          entries.forEach(([key, proj]) => {
+            const label = proj.label || key;
+            const total = proj.total;
+            const branch = proj.branch || "n/a";
+            const tr = document.createElement("tr");
+            const tdLabel = document.createElement("td");
+            tdLabel.textContent = label;
+            const tdBranch = document.createElement("td");
+            tdBranch.textContent = branch;
+            const tdTotal = document.createElement("td");
+            tdTotal.innerHTML = `<strong>${total}</strong>`;
+            tr.appendChild(tdLabel);
+            tr.appendChild(tdBranch);
+            tr.appendChild(tdTotal);
+            tbody.appendChild(tr);
+          });
+          table.appendChild(tbody);
+          container.innerHTML = "";
+          container.appendChild(table);
+        }
+      } catch (err) {
+        document.getElementById("pages-total").textContent = "—";
+        const container = document.getElementById("pages-table-container");
+        container.innerHTML = "Could not load pages.json";
+      }
+    }
+
+    async function loadPageRefs() {
+      try {
+        const res = await fetch("./pages_reference.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const projects = data.projects || {};
+        const grand = data.grand_total;
+        const entries = Object.entries(projects).filter(
+          ([, proj]) => typeof proj?.total === "number"
+        );
+
+        document.getElementById("refs-total").textContent =
+          typeof grand === "number" ? `Total reference pages: ${grand}` : "—";
+        const container = document.getElementById("refs-table-container");
+        if (!entries.length) {
+          container.innerHTML = "No project counts loaded";
+        } else {
+          const table = document.createElement("table");
+          table.className = "metric-table";
+          const thead = document.createElement("thead");
+          const hr = document.createElement("tr");
+          ["Project", "Branch", "Reference pages"].forEach((col) => {
+            const th = document.createElement("th");
+            th.textContent = col;
+            hr.appendChild(th);
+          });
+          thead.appendChild(hr);
+          table.appendChild(thead);
+
+          const tbody = document.createElement("tbody");
+          entries.forEach(([key, proj]) => {
+            const label = proj.label || key;
+            const total = proj.total;
+            const branch = proj.branch || "n/a";
+            const tr = document.createElement("tr");
+            const tdLabel = document.createElement("td");
+            tdLabel.textContent = label;
+            const tdBranch = document.createElement("td");
+            tdBranch.textContent = branch;
+            const tdTotal = document.createElement("td");
+            tdTotal.innerHTML = `<strong>${total}</strong>`;
+            tr.appendChild(tdLabel);
+            tr.appendChild(tdBranch);
+            tr.appendChild(tdTotal);
+            tbody.appendChild(tr);
+          });
+          table.appendChild(tbody);
+          container.innerHTML = "";
+          container.appendChild(table);
+        }
+      } catch (err) {
+        document.getElementById("refs-total").textContent = "—";
+        const container = document.getElementById("refs-table-container");
+        container.innerHTML = "Could not load pages_reference.json";
+      }
+    }
+
+    async function loadPageViews() {
+      try {
+        const res = await fetch("./page_views.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const projects = data.projects || {};
+        const windows = data.windows || [30, 90, 365];
+        const runningTotals = windows.reduce((acc, w) => ({ ...acc, [w]: 0 }), {});
+
+        document.getElementById("views-title").textContent = "Page Views";
+        const container = document.getElementById("views-table-container");
+        const table = document.createElement("table");
+        table.className = "metric-table";
+
+        const thead = document.createElement("thead");
+        const hr = document.createElement("tr");
+        ["Project", ...windows.map((w) => `${w}d`)].forEach((col) => {
+          const th = document.createElement("th");
+          th.textContent = col;
+          hr.appendChild(th);
+        });
+        thead.appendChild(hr);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        Object.entries(projects).forEach(([key, proj]) => {
+          const label = proj.label || key;
+          const views = proj.views || {};
+          const row = document.createElement("tr");
+          const name = document.createElement("td");
+          name.textContent = label;
+          row.appendChild(name);
+          windows.forEach((w) => {
+            const td = document.createElement("td");
+            const val = views[w] ?? views[String(w)];
+            const formatted = val != null ? Number(val).toLocaleString("fr-FR") : "n/a";
+            if (val != null && Number.isFinite(Number(val))) {
+              runningTotals[w] += Number(val);
+            }
+            td.innerHTML = val != null ? `<strong>${formatted}</strong>` : "n/a";
+            row.appendChild(td);
+          });
+          tbody.appendChild(row);
+        });
+
+        const totals = data.totals || runningTotals;
+        const totalsRow = document.createElement("tr");
+        const totalsLabel = document.createElement("td");
+        totalsLabel.innerHTML = "<strong>Total</strong>";
+        totalsRow.appendChild(totalsLabel);
+        windows.forEach((w) => {
+          const td = document.createElement("td");
+          const val = totals[w] ?? totals[String(w)];
+          const formatted = val != null ? Number(val).toLocaleString("fr-FR") : "n/a";
+          td.innerHTML = val != null ? `<strong>${formatted}</strong>` : "n/a";
+          totalsRow.appendChild(td);
+        });
+        tbody.appendChild(totalsRow);
+
+        table.appendChild(tbody);
+
+        container.innerHTML = "";
+        container.appendChild(table);
+      } catch (err) {
+        document.getElementById("views-title").textContent = "Could not load page_views.json";
+        const container = document.getElementById("views-table-container");
+        container.innerHTML = "";
+      }
+    }
+
+    async function loadUniquePageViews() {
+      const titleEl = document.getElementById("unique-title");
+      const container = document.getElementById("unique-table-container");
+      const chartContainer = document.getElementById("unique-chart-container");
+
+      try {
+        const res = await fetch("./unique_page_views.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const projects = data.projects || {};
+        const rangeLength = data.rangeLength ?? data.range_length ?? 365;
+        const resolution = data.resolution || data.res || "month";
+        const months =
+          Array.isArray(data.months) && data.months.length
+            ? data.months
+            : Array.from(
+                new Set(
+                  Object.values(projects)
+                    .flatMap((p) => (Array.isArray(p?.buckets) ? p.buckets : []))
+                    .map((b) => b.date)
+                    .filter(Boolean)
+                )
+              ).sort();
+
+        // Trim older months to keep the table readable
+        const cutoffMonth = "2025-03-01";
+        const displayMonths = months.filter((m) => m >= cutoffMonth);
+        const monthsToUse = displayMonths.length ? displayMonths : months;
+
+        titleEl.textContent = "Unique page views (last 12 months)";
+
+        const table = document.createElement("table");
+        table.className = "metric-table";
+
+        const thead = document.createElement("thead");
+        const hr = document.createElement("tr");
+        ["Project", ...monthsToUse.map((m) => m.slice(0, 7)), "Total"].forEach((col) => {
+          const th = document.createElement("th");
+          th.textContent = col;
+          hr.appendChild(th);
+        });
+        thead.appendChild(hr);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        const totalsByMonth = monthsToUse.reduce((acc, m) => ({ ...acc, [m]: 0 }), {});
+        let grandTotal = 0;
+
+        Object.entries(projects).forEach(([key, proj]) => {
+          const label = proj.label || key;
+          const buckets = Array.isArray(proj.buckets) ? proj.buckets : [];
+          const total = proj.total ?? buckets.reduce((acc, b) => acc + Number(b.value || 0), 0);
+          grandTotal += Number(total) || 0;
+
+          const row = document.createElement("tr");
+          const name = document.createElement("td");
+          name.textContent = label;
+          row.appendChild(name);
+
+          const bucketMap = buckets.reduce((acc, b) => {
+            if (b.date) acc[b.date] = b.value;
+            return acc;
+          }, {});
+
+          monthsToUse.forEach((m) => {
+            const td = document.createElement("td");
+            const val = bucketMap[m];
+            if (val != null && Number.isFinite(Number(val))) {
+              totalsByMonth[m] += Number(val);
+              td.innerHTML = `<strong>${Number(val).toLocaleString("fr-FR")}</strong>`;
+            } else {
+              td.textContent = "—";
+            }
+            row.appendChild(td);
+          });
+
+          const totalCell = document.createElement("td");
+          if (total != null && Number.isFinite(Number(total))) {
+            totalCell.innerHTML = `<strong>${Number(total).toLocaleString("fr-FR")}</strong>`;
+          } else {
+            totalCell.textContent = "—";
+          }
+          row.appendChild(totalCell);
+          tbody.appendChild(row);
+        });
+
+        // Totals row
+        const totalsRow = document.createElement("tr");
+        const totalsLabel = document.createElement("td");
+        totalsLabel.innerHTML = "<strong>Total</strong>";
+        totalsRow.appendChild(totalsLabel);
+
+        monthsToUse.forEach((m) => {
+          const td = document.createElement("td");
+          const val = totalsByMonth[m];
+          td.innerHTML = Number.isFinite(Number(val))
+            ? `<strong>${Number(val).toLocaleString("fr-FR")}</strong>`
+            : "—";
+          totalsRow.appendChild(td);
+        });
+
+        const grandCell = document.createElement("td");
+        grandCell.innerHTML = Number.isFinite(Number(grandTotal))
+          ? `<strong>${Number(grandTotal).toLocaleString("fr-FR")}</strong>`
+          : "—";
+        totalsRow.appendChild(grandCell);
+        tbody.appendChild(totalsRow);
+
+        table.appendChild(tbody);
+        container.innerHTML = "";
+        container.appendChild(table);
+
+        // ---- Chart (inline SVG, no deps) ----
+        const colors = {
+          "retail-media": "#0f3b8c",
+          "retailer-integration": "#e11d48",
+          "marketing-solutions": "#1b7f3a",
+        };
+
+        const series = Object.entries(projects).map(([key, proj]) => {
+          const buckets = Array.isArray(proj.buckets) ? proj.buckets : [];
+          const bucketMap = buckets.reduce((acc, b) => {
+            if (b.date) acc[b.date] = Number(b.value || 0);
+            return acc;
+          }, {});
+          return { key, label: proj.label || key, bucketMap };
+        }).filter((s) => colors[s.key]);
+
+        const pointsBySeries = series.map((s) => {
+          let seenReal = false;
+          return monthsToUse.map((m, idx) => {
+            const val = s.bucketMap[m];
+            if (val != null && Number(val) > 0) seenReal = true;
+            return {
+              x: idx,
+              y: seenReal ? (val != null ? val : 0) : null,
+            };
+          });
+        });
+
+        const allValues = pointsBySeries.flatMap((pts) => pts.map((p) => p.y).filter((v) => v != null));
+        const maxValRaw = Math.max(10, ...allValues);
+        const step = 1000;
+        const maxVal = Math.ceil(maxValRaw / step) * step;
+        const width = Math.max(320, monthsToUse.length * 50);
+        const height = 240;
+        const pad = { top: 16, right: 12, bottom: 30, left: 40 };
+
+        const xFor = (idx) => {
+          if (monthsToUse.length <= 1) return pad.left + (width - pad.left - pad.right) / 2;
+          const span = width - pad.left - pad.right;
+          return pad.left + (idx / (monthsToUse.length - 1)) * span;
+        };
+        const yFor = (val) => {
+          const span = height - pad.top - pad.bottom;
+          return pad.top + span * (1 - val / maxVal);
+        };
+
+        const makePath = (pts) => {
+          const filtered = pts.filter((p) => p.y != null);
+          if (!filtered.length) return "";
+          return filtered
+            .map((p, idx) => `${idx === 0 ? "M" : "L"} ${xFor(p.x).toFixed(1)} ${yFor(p.y).toFixed(1)}`)
+            .join(" ");
+        };
+
+        const svgParts = [];
+        svgParts.push(`<svg width="100%" height="${height}" viewBox="0 0 ${width} ${height}" preserveAspectRatio="none" role="img" aria-label="Unique page views per month">`);
+        // Gridlines + y axis labels
+        const ticks = 4;
+        for (let i = 0; i <= ticks; i++) {
+          const val = (maxVal / ticks) * i;
+          const y = yFor(val);
+          svgParts.push(`<line x1="${pad.left}" y1="${y.toFixed(1)}" x2="${width - pad.right}" y2="${y.toFixed(1)}" stroke="#e5e7eb" stroke-width="1" />`);
+          svgParts.push(`<text x="${pad.left - 6}" y="${y + 4}" font-size="10" text-anchor="end" fill="#444">${Math.round(val / 1000).toLocaleString("fr-FR")}k</text>`);
+        }
+        // X labels
+        monthsToUse.forEach((m, idx) => {
+          const x = xFor(idx);
+          svgParts.push(`<line x1="${x.toFixed(1)}" y1="${height - pad.bottom}" x2="${x.toFixed(1)}" y2="${height - pad.bottom + 4}" stroke="#000" stroke-width="1" />`);
+          svgParts.push(
+            `<text x="${x.toFixed(1)}" y="${height - pad.bottom + 16}" font-size="10" text-anchor="middle" fill="#444">${m.slice(5, 7)}/${m.slice(2, 4)}</text>`
+          );
+        });
+        // Series lines and points
+        pointsBySeries.forEach((pts, idx) => {
+          const key = series[idx].key;
+          const color = colors[key] || "#111";
+          const path = makePath(pts);
+          if (!path) return;
+          svgParts.push(`<path d="${path}" fill="none" stroke="${color}" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />`);
+          pts.forEach((p) => {
+            if (p.y == null) return;
+            svgParts.push(
+              `<circle cx="${xFor(p.x).toFixed(1)}" cy="${yFor(p.y).toFixed(1)}" r="3" fill="${color}" stroke="#000" stroke-width="1" />`
+            );
+          });
+        });
+        svgParts.push("</svg>");
+
+        // Legend
+        const legend = document.createElement("div");
+        legend.style.display = "flex";
+        legend.style.flexWrap = "wrap";
+        legend.style.gap = "8px";
+        legend.style.marginTop = "6px";
+        series.forEach((s) => {
+          const sw = document.createElement("span");
+          sw.style.display = "inline-flex";
+          sw.style.alignItems = "center";
+          sw.style.gap = "6px";
+          sw.style.fontSize = "12px";
+          sw.innerHTML = `<span style="display:inline-block;width:14px;height:6px;border:1px solid #000;background:${colors[s.key] || "#111"}"></span>${s.label}`;
+          legend.appendChild(sw);
+        });
+
+        chartContainer.innerHTML = svgParts.join("");
+        chartContainer.appendChild(legend);
+      } catch (err) {
+        titleEl.textContent = "Unique page views (missing data)";
+        container.innerHTML =
+          '<span class="error">Run unique_page_views.py to generate unique_page_views.json</span>';
+        chartContainer.innerHTML = "";
+      }
+    }
+
+    async function loadTopPages() {
+      try {
+        const res = await fetch("./top_pages.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const projects = data.projects || {};
+        const limit = data.limit ?? 10;
+        const container = document.getElementById("top-table-container");
+        container.innerHTML = "";
+
+        if (!Object.keys(projects).length) {
+          container.textContent = "No data";
+          return;
+        }
+
+        const table = document.createElement("table");
+        table.className = "top-table";
+        table.style.width = "100%";
+        table.style.tableLayout = "auto";
+        const thead = document.createElement("thead");
+        const hr = document.createElement("tr");
+        ["Project", ...Array.from({ length: limit }, (_, i) => `#${i + 1}`)].forEach((col) => {
+          const th = document.createElement("th");
+          th.textContent = col;
+          th.style.whiteSpace = "nowrap";
+          hr.appendChild(th);
+        });
+        thead.appendChild(hr);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        Object.entries(projects).forEach(([key, proj]) => {
+          const tr = document.createElement("tr");
+          const label = proj.label || key;
+          const items = Array.isArray(proj.items) ? proj.items.slice(0, limit) : [];
+
+          const nameCell = document.createElement("td");
+          nameCell.textContent = label;
+          tr.appendChild(nameCell);
+
+          for (let i = 0; i < limit; i++) {
+            const td = document.createElement("td");
+            const item = items[i];
+            if (item) {
+              const titleRaw = item.title || item.path || "(untitled)";
+              const title = titleRaw.replace(/^\/?docs\//, "");
+              const views = item.views != null ? Number(item.views).toLocaleString("fr-FR") : "n/a";
+              td.innerHTML = `<strong>${title}</strong> / ${views}`;
+              td.style.whiteSpace = "normal";
+              td.style.wordBreak = "break-word";
+            } else {
+              td.textContent = "—";
+            }
+            tr.appendChild(td);
+          }
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        container.style.overflowX = "auto";
+        container.appendChild(table);
+      } catch (err) {
+        const container = document.getElementById("top-table-container");
+        container.innerHTML = "Could not load top_pages.json";
+      }
+    }
+
+    async function loadOasCoverage() {
+      try {
+        const res = await fetch("./oas_guide_coverage.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const projects = data.projects || {};
+        const entries = Object.entries(projects);
+        const container = document.getElementById("oas-table-container");
+        const missingList = document.getElementById("oas-missing-container");
+        container.innerHTML = "";
+        missingList.innerHTML = "";
+
+        if (entries.length === 0) {
+          document.getElementById("oas-title").textContent = "Coverage unavailable";
+          container.textContent = "No projects";
+          return;
+        }
+
+        document.getElementById("oas-title").textContent = "Endpoint Documentation Coverage";
+
+        const table = document.createElement("table");
+        table.className = "metric-table";
+        const thead = document.createElement("thead");
+        const hr = document.createElement("tr");
+        ["Project", "OAS ops", "Guide ops", "Op coverage", "Path coverage", "Missing ops"].forEach((col) => {
+          const th = document.createElement("th");
+          th.textContent = col;
+          hr.appendChild(th);
+        });
+        thead.appendChild(hr);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        entries.forEach(([key, proj]) => {
+          const tr = document.createElement("tr");
+          const label = proj.label || key;
+          const oasOps = proj.oas_operations ?? 0;
+          const docOps = proj.doc_operations ?? 0;
+          const coverage = proj.coverage_pct ?? 0;
+          const pathsPct = proj.coverage_paths_pct ?? coverage;
+          const missingCount = proj.missing_count ?? 0;
+          [label, oasOps, docOps, `${coverage}%`, `${pathsPct}%`, missingCount].forEach((val) => {
+            const td = document.createElement("td");
+            if (typeof val === "number") {
+              td.innerHTML = `<strong>${Number(val).toLocaleString("fr-FR")}</strong>`;
+            } else {
+              td.textContent = val;
+            }
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        container.appendChild(table);
+
+        // No missing list render to keep the card concise
+      } catch (err) {
+        document.getElementById("oas-title").textContent = "Coverage unavailable";
+        const container = document.getElementById("oas-table-container");
+        container.innerHTML = "Could not load oas_guide_coverage.json";
+      }
+    }
+
+    async function loadSearchTerms() {
+      try {
+        const res = await fetch("./search_terms.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const projects = data.projects || {};
+        const limit = data.limit ?? 10;
+        const container = document.getElementById("search-table-container");
+        container.innerHTML = "";
+        document.getElementById("search-title").textContent = "Top 10 queries (per project)";
+
+        if (!Object.keys(projects).length) {
+          container.textContent = "No data";
+          return;
+        }
+
+        const table = document.createElement("table");
+        table.className = "top-table";
+        const thead = document.createElement("thead");
+        const hr = document.createElement("tr");
+        ["Project", ...Array.from({ length: limit }, (_, i) => `#${i + 1}`)].forEach((col) => {
+          const th = document.createElement("th");
+          th.textContent = col;
+          hr.appendChild(th);
+        });
+        thead.appendChild(hr);
+        table.appendChild(thead);
+
+        const tbody = document.createElement("tbody");
+        Object.entries(projects).forEach(([key, proj]) => {
+          const tr = document.createElement("tr");
+          const label = proj.label || key;
+          const items = Array.isArray(proj.items) ? proj.items.slice(0, limit) : [];
+
+          const nameCell = document.createElement("td");
+          nameCell.textContent = label;
+          tr.appendChild(nameCell);
+
+          for (let i = 0; i < limit; i++) {
+            const td = document.createElement("td");
+            const item = items[i];
+            if (item) {
+              const term = item.term || "(untitled)";
+              const count = item.count != null ? Number(item.count).toLocaleString("fr-FR") : "n/a";
+              td.innerHTML = `<strong>${term}</strong> / ${count}`;
+            } else {
+              td.textContent = "—";
+            }
+            tr.appendChild(td);
+          }
+          tbody.appendChild(tr);
+        });
+        table.appendChild(tbody);
+        container.appendChild(table);
+      } catch (err) {
+        const container = document.getElementById("search-table-container");
+        container.innerHTML = "Could not load search_terms.json";
+        document.getElementById("search-title").textContent = "Search terms unavailable";
+      }
+    }
+
+    function formatNumber(val) {
+      const num = Number(val);
+      if (Number.isFinite(num)) return num.toLocaleString("fr-FR");
+      return val;
+    }
+
+    async function loadBrokenLinks() {
+      try {
+        const res = await fetch("./broken_links.json", { cache: "no-store" });
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+        const data = await res.json();
+        const projects = Object.entries(data.projects || {});
+        const container = document.getElementById("broken-grid-container");
+        container.innerHTML = "";
+        document.getElementById("broken-title").textContent = "Broken links checks";
+
+        projects.forEach(([key, proj]) => {
+          const card = document.createElement("div");
+          card.className = "top-card";
+
+          const label = proj.label || key;
+          const extracted = proj.extracted_links ?? 0;
+          const scanned = proj.checked_links ?? proj.scanned ?? 0;
+          const external = proj.external_links ?? 0;
+          const brokenExternal = Array.isArray(proj.broken_external)
+            ? proj.broken_external
+            : Array.isArray(proj.broken_external_detail)
+              ? proj.broken_external_detail.map((b) => b.url)
+              : [];
+          const broken = Array.isArray(proj.broken)
+            ? proj.broken
+            : Array.isArray(proj.broken_detail)
+              ? proj.broken_detail.map((b) => b.url)
+              : [];
+
+          const title = document.createElement("div");
+          title.className = "row";
+          title.innerHTML = `<strong>${label}</strong>`;
+          card.appendChild(title);
+
+          const table = document.createElement("table");
+          table.className = "metric-table";
+          const thead = document.createElement("thead");
+          const hr = document.createElement("tr");
+          ["Links extracted", "Links checked", "Broken links"].forEach((col) => {
+            const th = document.createElement("th");
+            th.textContent = col;
+            hr.appendChild(th);
+          });
+          thead.appendChild(hr);
+          table.appendChild(thead);
+
+          const tbody = document.createElement("tbody");
+          const tr = document.createElement("tr");
+          [extracted, scanned + external, broken.length + brokenExternal.length].forEach((val) => {
+            const td = document.createElement("td");
+            if (typeof val === "number") {
+              td.innerHTML = `<strong>${Number(val).toLocaleString("fr-FR")}</strong>`;
+            } else {
+              td.textContent = val;
+            }
+            tr.appendChild(td);
+          });
+          tbody.appendChild(tr);
+          table.appendChild(tbody);
+          card.appendChild(table);
+
+          const detailListRaw = Array.isArray(proj.broken_detail) ? proj.broken_detail : broken.map((url) => ({ url }));
+          const detailList = detailListRaw.slice(0, 2);
+          if (detailList.length) {
+            const detail = document.createElement("div");
+            detail.className = "list";
+
+            const sub = document.createElement("div");
+            sub.className = "row";
+            sub.innerHTML = `<strong>First 2 broken links</strong>`;
+            detail.appendChild(sub);
+            detailList.forEach((item, idxItem) => {
+              const row = document.createElement("div");
+              row.className = "row";
+              const sources = Array.isArray(item.sources) && item.sources.length
+                ? ` (pages: ${item.sources.slice(0, 3).join(", ")}${item.sources.length > 3 ? "…" : ""})`
+                : "";
+              row.textContent = `${idxItem + 1}. ${item.url}${sources}`;
+              detail.appendChild(row);
+            });
+            if (detailListRaw.length > 2) {
+              const more = document.createElement("div");
+              more.className = "row";
+              more.textContent = `... ${detailListRaw.length - 2} more`;
+              detail.appendChild(more);
+            }
+            card.appendChild(detail);
+          }
+
+          container.appendChild(card);
+        });
+      } catch (err) {
+        document.getElementById("broken-title").textContent = "Could not load broken_links.json";
+      }
+    }
+
+    loadFreshness();
+    loadPageCounts();
+    loadPageRefs();
+    loadOasCoverage();
+    loadPageViews();
+    loadUniquePageViews();
+    loadTopPages();
+    loadSearchTerms();
+    loadBrokenLinks();
+  </script>
+</body>
+</html>

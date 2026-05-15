@@ -1,0 +1,54 @@
+name: Publish Dashboard
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 5 * * *" # 05:00 UTC daily
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate metrics
+        env:
+          README_TOKEN_RETAIL_MEDIA: ${{ secrets.README_TOKEN_RETAIL_MEDIA }}
+          README_TOKEN_RETAIL_MEDIA_PREVIEW: ${{ secrets.README_TOKEN_RETAIL_MEDIA_PREVIEW }}
+          README_TOKEN_RETAIL_MEDIA_DELIVERY: ${{ secrets.README_TOKEN_RETAIL_MEDIA_DELIVERY }}
+          README_TOKEN_RETAILER_INTEGRATION: ${{ secrets.README_TOKEN_RETAILER_INTEGRATION }}
+          README_TOKEN_CMS_STABLE: ${{ secrets.README_TOKEN_CMS_STABLE }}
+          README_TOKEN_CMS_PREVIEW: ${{ secrets.README_TOKEN_CMS_PREVIEW }}
+          README_TOKEN_MARKETING_SOLUTIONS_STABLE: ${{ secrets.README_TOKEN_MARKETING_SOLUTIONS_STABLE }}
+          README_TOKEN_MARKETING_SOLUTIONS_PREVIEW: ${{ secrets.README_TOKEN_MARKETING_SOLUTIONS_PREVIEW }}
+        run: |
+          python scripts/page_counts.py --json-out UI/pages.json
+          python scripts/page_counts_reference.py --json-out UI/pages_reference.json
+          python scripts/page_views.py --json-out UI/page_views.json
+          python scripts/top_pages.py --json-out UI/top_pages.json
+          python scripts/search_terms.py --json-out UI/search_terms.json || true
+          python scripts/freshness.py --json-out UI/freshness.json || true
+          python scripts/oas_guide_coverage.py --json-out UI/oas_guide_coverage.json || true
+          python scripts/broken_links_api.py --json-out UI/broken_links.json || true
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: UI
+
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,186 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        {
+          "term": "creative",
+          "count": 33
+        },
+        {
+          "term": "postman",
+          "count": 22
+        },
+        {
+          "term": "capout",
+          "count": 22
+        },
+        {
+          "term": "brands",
+          "count": 19
+        },
+        {
+          "term": "keyword",
+          "count": 18
+        },
+        {
+          "term": "statistics",
+          "count": 17
+        },
+        {
+          "term": "offsite",
+          "count": 17
+        },
+        {
+          "term": "report",
+          "count": 16
+        },
+        {
+          "term": "auction-line-items",
+          "count": 16
+        },
+        {
+          "term": "keywords",
+          "count": 15
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "filters",
+          "count": 27
+        },
+        {
+          "term": "filter",
+          "count": 23
+        },
+        {
+          "term": "spotlight",
+          "count": 12
+        },
+        {
+          "term": "privacy",
+          "count": 10
+        },
+        {
+          "term": "bid",
+          "count": 10
+        },
+        {
+          "term": "carousel",
+          "count": 10
+        },
+        {
+          "term": "beacon",
+          "count": 9
+        },
+        {
+          "term": "feed",
+          "count": 9
+        },
+        {
+          "term": "nolog",
+          "count": 8
+        },
+        {
+          "term": "video",
+          "count": 8
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "tracking",
+          "count": 16
+        },
+        {
+          "term": "product",
+          "count": 14
+        },
+        {
+          "term": "metrics",
+          "count": 10
+        },
+        {
+          "term": "rate limit",
+          "count": 10
+        },
+        {
+          "term": "gum",
+          "count": 9
+        },
+        {
+          "term": "consent",
+          "count": 9
+        },
+        {
+          "term": "MarketingObjective",
+          "count": 9
+        },
+        {
+          "term": "report",
+          "count": 9
+        },
+        {
+          "term": "domain",
+          "count": 8
+        },
+        {
+          "term": "client secret",
+          "count": 8
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90,
+  "merged": {
+    "label": "All projects",
+    "items": [
+      {
+        "term": "creative",
+        "count": 33
+      },
+      {
+        "term": "filters",
+        "count": 27
+      },
+      {
+        "term": "report",
+        "count": 25
+      },
+      {
+        "term": "filter",
+        "count": 23
+      },
+      {
+        "term": "postman",
+        "count": 22
+      },
+      {
+        "term": "capout",
+        "count": 22
+      },
+      {
+        "term": "brands",
+        "count": 19
+      },
+      {
+        "term": "keyword",
+        "count": 18
+      },
+      {
+        "term": "statistics",
+        "count": 17
+      },
+      {
+        "term": "offsite",
+        "count": 17
+      }
+    ]
+  }
+}

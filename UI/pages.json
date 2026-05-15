@@ -1,0 +1,75 @@
+{
+  "projects": {
+    "retail-media-stable": {
+      "branch": "v2026.01",
+      "label": "Retail Media API (stable)",
+      "guides": 102,
+      "reference": 120,
+      "custom": 0,
+      "hidden": 0,
+      "hidden_guides": 0,
+      "hidden_reference": 0,
+      "hidden_custom": 0,
+      "total": 222
+    },
+    "retail-media-preview": {
+      "branch": "v2026-preview",
+      "label": "Retail Media API (preview)",
+      "guides": 101,
+      "reference": 91,
+      "custom": 0,
+      "hidden": 0,
+      "hidden_guides": 0,
+      "hidden_reference": 0,
+      "hidden_custom": 0,
+      "total": 192
+    },
+    "cms-stable": {
+      "branch": "v2025.10",
+      "label": "Retailer Integration (stable)",
+      "error": "401 Client Error: Unauthorized for url: https://api.readme.com/v2/branches/v2025.10/categories/guides"
+    },
+    "cms-preview": {
+      "branch": "v2026.01",
+      "label": "Retailer Integration (preview)",
+      "error": "401 Client Error: Unauthorized for url: https://api.readme.com/v2/branches/v2026.01/categories/guides"
+    },
+    "retail-media-delivery": {
+      "branch": "v2026.01",
+      "label": "Retail Media Delivery",
+      "guides": 142,
+      "reference": 5,
+      "custom": 0,
+      "hidden": 0,
+      "hidden_guides": 0,
+      "hidden_reference": 0,
+      "hidden_custom": 0,
+      "total": 147
+    },
+    "marketing-solutions": {
+      "branch": "v2026.01",
+      "label": "Marketing Solutions (stable)",
+      "guides": 71,
+      "reference": 111,
+      "custom": 0,
+      "hidden": 0,
+      "hidden_guides": 0,
+      "hidden_reference": 0,
+      "hidden_custom": 0,
+      "total": 182
+    },
+    "marketing-solutions-preview": {
+      "branch": "v2026-preview",
+      "label": "Marketing Solutions (preview)",
+      "guides": 34,
+      "reference": 119,
+      "custom": 0,
+      "hidden": 0,
+      "hidden_guides": 0,
+      "hidden_reference": 0,
+      "hidden_custom": 0,
+      "total": 153
+    }
+  },
+  "grand_total": 896
+}

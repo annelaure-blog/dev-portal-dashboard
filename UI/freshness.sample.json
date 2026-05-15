@@ -1,0 +1,11 @@
+{
+  "branch": "2026.01",
+  "latest": {
+    "filename": "payments.yaml",
+    "title": "Payments API",
+    "last_updated": "2024-05-01T15:42:11+00:00",
+    "days_since": 3
+  },
+  "generated_at": "2024-05-04T12:10:00+00:00",
+  "count": 12
+}

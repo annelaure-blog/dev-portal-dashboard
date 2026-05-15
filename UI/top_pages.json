@@ -1,0 +1,175 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        {
+          "title": "/docs/welcome-to-criteo",
+          "views": 33800,
+          "path": "/docs/welcome-to-criteo"
+        },
+        {
+          "title": "/changelog",
+          "views": 17817,
+          "path": "/changelog"
+        },
+        {
+          "title": "/reference/apiv1oauth2tokenpost",
+          "views": 17677,
+          "path": "/reference/apiv1oauth2tokenpost"
+        },
+        {
+          "title": "/reference",
+          "views": 12627,
+          "path": "/reference"
+        },
+        {
+          "title": "/docs",
+          "views": 12081,
+          "path": "/docs"
+        },
+        {
+          "title": "/docs/is-criteo-api-for-you",
+          "views": 7810,
+          "path": "/docs/is-criteo-api-for-you"
+        },
+        {
+          "title": "/reference/addbrands",
+          "views": 6015,
+          "path": "/reference/addbrands"
+        },
+        {
+          "title": "/docs/metrics-and-dimensions",
+          "views": 5682,
+          "path": "/docs/metrics-and-dimensions"
+        },
+        {
+          "title": "/docs/connect-to-the-api",
+          "views": 5641,
+          "path": "/docs/connect-to-the-api"
+        },
+        {
+          "title": "/docs/campaign",
+          "views": 5222,
+          "path": "/docs/campaign"
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "title": "/docs/whats-new",
+          "views": 7365,
+          "path": "/docs/whats-new"
+        },
+        {
+          "title": "/docs/api-parameters-1",
+          "views": 6488,
+          "path": "/docs/api-parameters-1"
+        },
+        {
+          "title": "/docs/overview",
+          "views": 6231,
+          "path": "/docs/overview"
+        },
+        {
+          "title": "/docs/integration-process",
+          "views": 4743,
+          "path": "/docs/integration-process"
+        },
+        {
+          "title": "/docs/api-calls",
+          "views": 4718,
+          "path": "/docs/api-calls"
+        },
+        {
+          "title": "/docs/product-feed-parameters",
+          "views": 4399,
+          "path": "/docs/product-feed-parameters"
+        },
+        {
+          "title": "/docs/product-upload-guide",
+          "views": 3320,
+          "path": "/docs/product-upload-guide"
+        },
+        {
+          "title": "/404",
+          "views": 3298,
+          "path": "/404"
+        },
+        {
+          "title": "/changelog",
+          "views": 3029,
+          "path": "/changelog"
+        },
+        {
+          "title": "/",
+          "views": 2990,
+          "path": "/"
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "title": "/docs/welcome-to-criteo",
+          "views": 32825,
+          "path": "/docs/welcome-to-criteo"
+        },
+        {
+          "title": "/changelog",
+          "views": 23500,
+          "path": "/changelog"
+        },
+        {
+          "title": "/reference/apiv1oauth2tokenpost",
+          "views": 20571,
+          "path": "/reference/apiv1oauth2tokenpost"
+        },
+        {
+          "title": "/docs",
+          "views": 15723,
+          "path": "/docs"
+        },
+        {
+          "title": "/reference",
+          "views": 14348,
+          "path": "/reference"
+        },
+        {
+          "title": "/docs/analytics",
+          "views": 11468,
+          "path": "/docs/analytics"
+        },
+        {
+          "title": "/docs/onboarding-checklist",
+          "views": 9652,
+          "path": "/docs/onboarding-checklist"
+        },
+        {
+          "title": "/docs/campaign-statistics",
+          "views": 6940,
+          "path": "/docs/campaign-statistics"
+        },
+        {
+          "title": "/docs/is-criteo-api-for-you",
+          "views": 6362,
+          "path": "/docs/is-criteo-api-for-you"
+        },
+        {
+          "title": "/docs/authentication",
+          "views": 5991,
+          "path": "/docs/authentication"
+        }
+      ]
+    }
+  },
+  "range": {
+    "start": "2025-01-01",
+    "end": "2026-01-01",
+    "days": 365
+  },
+  "limit": 10
+}

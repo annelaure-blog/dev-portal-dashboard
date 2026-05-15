@@ -1,0 +1,17 @@
+{
+  "projects": {
+    "retail-media-stable": {
+      "branch": "v2026.01",
+      "label": "Retail Media API (stable)",
+      "reference": 120,
+      "total": 120
+    },
+    "retail-media-preview": {
+      "branch": "v2026-preview",
+      "label": "Retail Media API (preview)",
+      "reference": 93,
+      "total": 93
+    }
+  },
+  "grand_total": 213
+}

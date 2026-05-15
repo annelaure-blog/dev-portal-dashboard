@@ -1,0 +1,40 @@
+{
+  "projects": {
+    "retail-media-stable": {
+      "branch": "v2025.10",
+      "guides": 42,
+      "reference": 58,
+      "custom": 5,
+      "total": 105
+    },
+    "retail-media-preview": {
+      "branch": "v2025-preview",
+      "guides": 21,
+      "reference": 34,
+      "custom": 2,
+      "total": 57
+    },
+    "cms-stable": {
+      "branch": "v2025.10",
+      "guides": 18,
+      "reference": 22,
+      "custom": 1,
+      "total": 41
+    },
+    "cms-preview": {
+      "branch": "v2026.01",
+      "guides": 12,
+      "reference": 14,
+      "custom": 0,
+      "total": 26
+    },
+    "retail-media-delivery": {
+      "branch": "v1.3",
+      "guides": 9,
+      "reference": 11,
+      "custom": 0,
+      "total": 20
+    }
+  },
+  "grand_total": 249
+}

@@ -1,0 +1,119 @@
+{
+  "projects": {
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "branch": "v2026.01",
+      "extracted_links": 93,
+      "checked_links": 17,
+      "external_links": 35,
+      "broken": [
+        "https://developers.criteo.com/marketing-solutions/reference-link/apiportfolioget",
+        "https://developers.criteo.com/marketing-solutions/reference/apiportfolioget",
+        "https://developers.criteo.com/marketing-solutions/v2025.10/docs/product-importer-api"
+      ],
+      "broken_detail": [
+        {
+          "url": "https://developers.criteo.com/marketing-solutions/reference-link/apiportfolioget",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "api-troubleshooting-tips"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/marketing-solutions/reference/apiportfolioget",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "start-using-your-api-connection"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/marketing-solutions/v2025.10/docs/product-importer-api",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "managing-sellers"
+          ]
+        }
+      ],
+      "broken_external": [
+        "https://api.criteo.com/\\{'\\{version}'}/marketing-solutions/marketplace-performance-outcomes/stats",
+        "https://blog.postman.com/announcing-postman-for-the-web-now-in-open-beta/",
+        "https://en.wikipedia.org/wiki/Exponential_backoff",
+        "https://en.wikipedia.org/wiki/ISO_4217",
+        "https://en.wikipedia.org/wiki/ISO_8601",
+        "https://search.maven.org/artifact/com.criteo/criteo-api-commercegrid-sdk",
+        "https://search.maven.org/artifact/com.criteo/criteo-api-marketingsolutions-sdk",
+        "https://www.criteo.com/criteo-privacy-guidelines-for-clients-and-publisher-partners/"
+      ],
+      "broken_external_detail": [
+        {
+          "url": "https://api.criteo.com/\\{'\\{version}'}/marketing-solutions/marketplace-performance-outcomes/stats",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "copy-of-getting-statistics"
+          ]
+        },
+        {
+          "url": "https://blog.postman.com/announcing-postman-for-the-web-now-in-open-beta/",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "use-postman-with-the-criteo-marketing-solutions-api"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Exponential_backoff",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "api-troubleshooting-tips"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ISO_4217",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "placement"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ISO_8601",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "commerce-grid-audience-segments-endpoints"
+          ]
+        },
+        {
+          "url": "https://search.maven.org/artifact/com.criteo/criteo-api-commercegrid-sdk",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "api-client-libraries"
+          ]
+        },
+        {
+          "url": "https://search.maven.org/artifact/com.criteo/criteo-api-marketingsolutions-sdk",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "api-client-libraries"
+          ]
+        },
+        {
+          "url": "https://www.criteo.com/criteo-privacy-guidelines-for-clients-and-publisher-partners/",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "criteo-api-terms-and-conditions"
+          ]
+        }
+      ]
+    }
+  },
+  "scanned": 17
+}

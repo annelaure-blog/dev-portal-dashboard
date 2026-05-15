@@ -1,0 +1,36 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        { "title": "Getting Started", "views": 12000, "path": "getting-started" },
+        { "title": "Authentication", "views": 9500, "path": "auth" },
+        { "title": "Campaigns", "views": 8200, "path": "campaigns" },
+        { "title": "Reports", "views": 6000, "path": "reports" },
+        { "title": "Bid Management", "views": 5200, "path": "bids" },
+        { "title": "FAQs", "views": 4300, "path": "faqs" },
+        { "title": "Errors", "views": 3900, "path": "errors" },
+        { "title": "Pagination", "views": 3500, "path": "pagination" },
+        { "title": "Rate Limits", "views": 3200, "path": "rate-limits" },
+        { "title": "Webhooks", "views": 3000, "path": "webhooks" }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        { "title": "Overview", "views": 8000, "path": "overview" },
+        { "title": "Data Model", "views": 6400, "path": "data-model" },
+        { "title": "Import Flow", "views": 6100, "path": "import" },
+        { "title": "API Keys", "views": 5800, "path": "api-keys" },
+        { "title": "Error Codes", "views": 5200, "path": "errors" },
+        { "title": "Webhooks", "views": 5000, "path": "webhooks" },
+        { "title": "Sync Schedule", "views": 4700, "path": "sync" },
+        { "title": "FAQs", "views": 4300, "path": "faqs" },
+        { "title": "Changelog", "views": 4000, "path": "changelog" },
+        { "title": "Support", "views": 3500, "path": "support" }
+      ]
+    }
+  },
+  "range": { "start": "2025-02-11", "end": "2026-02-11", "days": 365 },
+  "limit": 10
+}
