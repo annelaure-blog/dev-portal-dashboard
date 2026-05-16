@@ -1,0 +1,141 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        {
+          "term": "creative",
+          "count": 29
+        },
+        {
+          "term": "capout",
+          "count": 28
+        },
+        {
+          "term": "offsite",
+          "count": 23
+        },
+        {
+          "term": "preferred",
+          "count": 20
+        },
+        {
+          "term": "brands",
+          "count": 17
+        },
+        {
+          "term": "keyword",
+          "count": 16
+        },
+        {
+          "term": "ssp",
+          "count": 14
+        },
+        {
+          "term": "reporting",
+          "count": 13
+        },
+        {
+          "term": "revenue",
+          "count": 13
+        },
+        {
+          "term": "statistics",
+          "count": 13
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "filter",
+          "count": 20
+        },
+        {
+          "term": "spotlight",
+          "count": 18
+        },
+        {
+          "term": "nolog",
+          "count": 16
+        },
+        {
+          "term": "filters",
+          "count": 12
+        },
+        {
+          "term": "video",
+          "count": 11
+        },
+        {
+          "term": "bid",
+          "count": 10
+        },
+        {
+          "term": "beacon",
+          "count": 9
+        },
+        {
+          "term": "privacy",
+          "count": 9
+        },
+        {
+          "term": "audience",
+          "count": 9
+        },
+        {
+          "term": "okhttp",
+          "count": 8
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "scopes",
+          "count": 15
+        },
+        {
+          "term": "currency",
+          "count": 12
+        },
+        {
+          "term": "statistics/report",
+          "count": 8
+        },
+        {
+          "term": "limit",
+          "count": 8
+        },
+        {
+          "term": "product set",
+          "count": 8
+        },
+        {
+          "term": "product",
+          "count": 8
+        },
+        {
+          "term": "consent",
+          "count": 8
+        },
+        {
+          "term": "client secret",
+          "count": 8
+        },
+        {
+          "term": "event",
+          "count": 8
+        },
+        {
+          "term": "gum",
+          "count": 8
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
