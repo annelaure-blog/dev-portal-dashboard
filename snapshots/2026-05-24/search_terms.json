@@ -1,0 +1,141 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        {
+          "term": "capout",
+          "count": 32
+        },
+        {
+          "term": "creative",
+          "count": 31
+        },
+        {
+          "term": "offsite",
+          "count": 21
+        },
+        {
+          "term": "preferred",
+          "count": 20
+        },
+        {
+          "term": "brands",
+          "count": 19
+        },
+        {
+          "term": "keyword",
+          "count": 17
+        },
+        {
+          "term": "ssp",
+          "count": 14
+        },
+        {
+          "term": "video",
+          "count": 14
+        },
+        {
+          "term": "revenue",
+          "count": 13
+        },
+        {
+          "term": "catalog",
+          "count": 13
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "filter",
+          "count": 22
+        },
+        {
+          "term": "spotlight",
+          "count": 18
+        },
+        {
+          "term": "nolog",
+          "count": 16
+        },
+        {
+          "term": "filters",
+          "count": 16
+        },
+        {
+          "term": "bid",
+          "count": 14
+        },
+        {
+          "term": "beacon",
+          "count": 11
+        },
+        {
+          "term": "trackTransaction",
+          "count": 10
+        },
+        {
+          "term": "privacy",
+          "count": 9
+        },
+        {
+          "term": "OnBasketChangeBeacon",
+          "count": 8
+        },
+        {
+          "term": "item-whitelist",
+          "count": 8
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "scopes",
+          "count": 15
+        },
+        {
+          "term": "currency",
+          "count": 12
+        },
+        {
+          "term": "product set",
+          "count": 11
+        },
+        {
+          "term": "gum",
+          "count": 8
+        },
+        {
+          "term": "statistics/report",
+          "count": 8
+        },
+        {
+          "term": "report",
+          "count": 8
+        },
+        {
+          "term": "limit",
+          "count": 8
+        },
+        {
+          "term": "event",
+          "count": 8
+        },
+        {
+          "term": "consent",
+          "count": 8
+        },
+        {
+          "term": "statistics",
+          "count": 8
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
