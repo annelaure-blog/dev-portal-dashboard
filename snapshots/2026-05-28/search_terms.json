@@ -1,0 +1,141 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        {
+          "term": "capout",
+          "count": 32
+        },
+        {
+          "term": "creative",
+          "count": 27
+        },
+        {
+          "term": "offsite",
+          "count": 19
+        },
+        {
+          "term": "brands",
+          "count": 17
+        },
+        {
+          "term": "keyword",
+          "count": 17
+        },
+        {
+          "term": "preferred",
+          "count": 17
+        },
+        {
+          "term": "video",
+          "count": 16
+        },
+        {
+          "term": "catalog",
+          "count": 15
+        },
+        {
+          "term": "campaign",
+          "count": 13
+        },
+        {
+          "term": "revenue",
+          "count": 13
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "spotlight",
+          "count": 20
+        },
+        {
+          "term": "filter",
+          "count": 20
+        },
+        {
+          "term": "filters",
+          "count": 14
+        },
+        {
+          "term": "bid",
+          "count": 14
+        },
+        {
+          "term": "nolog",
+          "count": 13
+        },
+        {
+          "term": "video",
+          "count": 12
+        },
+        {
+          "term": "trackTransaction",
+          "count": 10
+        },
+        {
+          "term": "privacy",
+          "count": 9
+        },
+        {
+          "term": "beacon",
+          "count": 9
+        },
+        {
+          "term": "item-whitelist",
+          "count": 8
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "scopes",
+          "count": 15
+        },
+        {
+          "term": "currency",
+          "count": 12
+        },
+        {
+          "term": "product set",
+          "count": 9
+        },
+        {
+          "term": "gum",
+          "count": 8
+        },
+        {
+          "term": "event",
+          "count": 8
+        },
+        {
+          "term": "sdk",
+          "count": 8
+        },
+        {
+          "term": "statistics/report",
+          "count": 8
+        },
+        {
+          "term": "consent",
+          "count": 8
+        },
+        {
+          "term": "product importer",
+          "count": 7
+        },
+        {
+          "term": "MarketingObjective",
+          "count": 7
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
