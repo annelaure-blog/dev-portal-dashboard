@@ -1,0 +1,141 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        {
+          "term": "capout",
+          "count": 28
+        },
+        {
+          "term": "creative",
+          "count": 27
+        },
+        {
+          "term": "offsite",
+          "count": 20
+        },
+        {
+          "term": "catalog",
+          "count": 19
+        },
+        {
+          "term": "preferred",
+          "count": 17
+        },
+        {
+          "term": "video",
+          "count": 16
+        },
+        {
+          "term": "keyword",
+          "count": 15
+        },
+        {
+          "term": "revenue",
+          "count": 13
+        },
+        {
+          "term": "campaign",
+          "count": 13
+        },
+        {
+          "term": "fill rate",
+          "count": 11
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "spotlight",
+          "count": 20
+        },
+        {
+          "term": "filter",
+          "count": 18
+        },
+        {
+          "term": "bid",
+          "count": 14
+        },
+        {
+          "term": "video",
+          "count": 14
+        },
+        {
+          "term": "filters",
+          "count": 14
+        },
+        {
+          "term": "nolog",
+          "count": 13
+        },
+        {
+          "term": "trackTransaction",
+          "count": 10
+        },
+        {
+          "term": "beacons",
+          "count": 10
+        },
+        {
+          "term": "beacon",
+          "count": 9
+        },
+        {
+          "term": "item-whitelist",
+          "count": 8
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "scopes",
+          "count": 15
+        },
+        {
+          "term": "currency",
+          "count": 12
+        },
+        {
+          "term": "product set",
+          "count": 9
+        },
+        {
+          "term": "sdk",
+          "count": 8
+        },
+        {
+          "term": "consent",
+          "count": 8
+        },
+        {
+          "term": "MarketingObjective",
+          "count": 7
+        },
+        {
+          "term": "adset",
+          "count": 7
+        },
+        {
+          "term": "product importer",
+          "count": 7
+        },
+        {
+          "term": "tracking",
+          "count": 7
+        },
+        {
+          "term": "pagination",
+          "count": 6
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
