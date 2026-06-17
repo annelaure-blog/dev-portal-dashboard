@@ -1,0 +1,141 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        {
+          "term": "capout",
+          "count": 31
+        },
+        {
+          "term": "catalog",
+          "count": 25
+        },
+        {
+          "term": "keyword",
+          "count": 22
+        },
+        {
+          "term": "product",
+          "count": 22
+        },
+        {
+          "term": "creative",
+          "count": 21
+        },
+        {
+          "term": "revenue",
+          "count": 20
+        },
+        {
+          "term": "report",
+          "count": 16
+        },
+        {
+          "term": "video",
+          "count": 14
+        },
+        {
+          "term": "preferred",
+          "count": 13
+        },
+        {
+          "term": "fill rate",
+          "count": 13
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "spotlight",
+          "count": 20
+        },
+        {
+          "term": "item-whitelist",
+          "count": 18
+        },
+        {
+          "term": "filter",
+          "count": 16
+        },
+        {
+          "term": "video",
+          "count": 14
+        },
+        {
+          "term": "nolog",
+          "count": 13
+        },
+        {
+          "term": "beacons",
+          "count": 10
+        },
+        {
+          "term": "trackTransaction",
+          "count": 10
+        },
+        {
+          "term": "filters",
+          "count": 10
+        },
+        {
+          "term": "retailer-visitor-id",
+          "count": 9
+        },
+        {
+          "term": "user agent",
+          "count": 8
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "scopes",
+          "count": 15
+        },
+        {
+          "term": "currency",
+          "count": 12
+        },
+        {
+          "term": "scope",
+          "count": 10
+        },
+        {
+          "term": "product set",
+          "count": 10
+        },
+        {
+          "term": "sdk",
+          "count": 8
+        },
+        {
+          "term": "consent",
+          "count": 8
+        },
+        {
+          "term": "adset",
+          "count": 8
+        },
+        {
+          "term": "timezone",
+          "count": 6
+        },
+        {
+          "term": "event",
+          "count": 6
+        },
+        {
+          "term": "realtime",
+          "count": 6
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
