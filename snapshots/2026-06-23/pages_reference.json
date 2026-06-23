@@ -1,0 +1,40 @@
+{
+  "projects": {
+    "retail-media-stable": {
+      "branch": "v2026.01",
+      "label": "Retail Media API (stable)",
+      "reference": 120,
+      "total": 120
+    },
+    "retail-media-preview": {
+      "branch": "v2026-preview",
+      "label": "Retail Media API (preview)",
+      "reference": 91,
+      "total": 91
+    },
+    "retailer-integration-stable": {
+      "branch": "v2025.10",
+      "label": "Retailer Integration (stable)",
+      "error": "404 Client Error: Not Found for url: https://api.readme.com/v2/branches/v2025.10/categories/reference"
+    },
+    "retailer-integration-preview": {
+      "branch": "v2026.01",
+      "label": "Retailer Integration (preview)",
+      "reference": 5,
+      "total": 5
+    },
+    "marketing-solutions": {
+      "branch": "v2026.01",
+      "label": "Marketing Solutions (stable)",
+      "reference": 111,
+      "total": 111
+    },
+    "marketing-solutions-preview": {
+      "branch": "v2026-preview",
+      "label": "Marketing Solutions (preview)",
+      "reference": 135,
+      "total": 135
+    }
+  },
+  "grand_total": 462
+}

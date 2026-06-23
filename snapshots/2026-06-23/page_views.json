@@ -1,0 +1,38 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "views": {
+        "30": 27593,
+        "90": 97264,
+        "365": 340887
+      }
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "views": {
+        "30": 11532,
+        "90": 37282,
+        "365": 145574
+      }
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "views": {
+        "30": 24730,
+        "90": 114023,
+        "365": 342541
+      }
+    }
+  },
+  "windows": [
+    30,
+    90,
+    365
+  ],
+  "totals": {
+    "30": 63855,
+    "90": 248569,
+    "365": 829002
+  }
+}
