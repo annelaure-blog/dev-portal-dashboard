@@ -1,0 +1,175 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        {
+          "title": "/docs/welcome-to-criteo",
+          "views": 18075,
+          "path": "/docs/welcome-to-criteo"
+        },
+        {
+          "title": "/changelog",
+          "views": 8749,
+          "path": "/changelog"
+        },
+        {
+          "title": "/reference/apiv1oauth2tokenpost",
+          "views": 8030,
+          "path": "/reference/apiv1oauth2tokenpost"
+        },
+        {
+          "title": "/reference",
+          "views": 5343,
+          "path": "/reference"
+        },
+        {
+          "title": "/docs/connect-to-the-api",
+          "views": 4800,
+          "path": "/docs/connect-to-the-api"
+        },
+        {
+          "title": "/docs",
+          "views": 4710,
+          "path": "/docs"
+        },
+        {
+          "title": "/docs/metrics-and-dimensions",
+          "views": 4002,
+          "path": "/docs/metrics-and-dimensions"
+        },
+        {
+          "title": "/reference/addbrands",
+          "views": 3751,
+          "path": "/reference/addbrands"
+        },
+        {
+          "title": "/docs/campaign",
+          "views": 3575,
+          "path": "/docs/campaign"
+        },
+        {
+          "title": "/docs/line-items",
+          "views": 3375,
+          "path": "/docs/line-items"
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "title": "/docs/whats-new",
+          "views": 5030,
+          "path": "/docs/whats-new"
+        },
+        {
+          "title": "/docs/api-parameters-1",
+          "views": 3912,
+          "path": "/docs/api-parameters-1"
+        },
+        {
+          "title": "/docs/overview",
+          "views": 3615,
+          "path": "/docs/overview"
+        },
+        {
+          "title": "/docs/api-calls",
+          "views": 3055,
+          "path": "/docs/api-calls"
+        },
+        {
+          "title": "/docs/integration-process",
+          "views": 2934,
+          "path": "/docs/integration-process"
+        },
+        {
+          "title": "/docs/product-feed-parameters",
+          "views": 2826,
+          "path": "/docs/product-feed-parameters"
+        },
+        {
+          "title": "/changelog",
+          "views": 2482,
+          "path": "/changelog"
+        },
+        {
+          "title": "/docs/api-responses",
+          "views": 2265,
+          "path": "/docs/api-responses"
+        },
+        {
+          "title": "/docs/feed-definition",
+          "views": 1945,
+          "path": "/docs/feed-definition"
+        },
+        {
+          "title": "/404",
+          "views": 1891,
+          "path": "/404"
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "title": "/docs/welcome-to-criteo",
+          "views": 17170,
+          "path": "/docs/welcome-to-criteo"
+        },
+        {
+          "title": "/changelog",
+          "views": 10333,
+          "path": "/changelog"
+        },
+        {
+          "title": "/reference/apiv1oauth2tokenpost",
+          "views": 9833,
+          "path": "/reference/apiv1oauth2tokenpost"
+        },
+        {
+          "title": "/docs/analytics",
+          "views": 6333,
+          "path": "/docs/analytics"
+        },
+        {
+          "title": "/docs",
+          "views": 6053,
+          "path": "/docs"
+        },
+        {
+          "title": "/reference",
+          "views": 5792,
+          "path": "/reference"
+        },
+        {
+          "title": "/docs/onboarding-checklist",
+          "views": 4855,
+          "path": "/docs/onboarding-checklist"
+        },
+        {
+          "title": "/docs/campaign-statistics",
+          "views": 4563,
+          "path": "/docs/campaign-statistics"
+        },
+        {
+          "title": "/docs/authentication",
+          "views": 3761,
+          "path": "/docs/authentication"
+        },
+        {
+          "title": "/docs/campaigns",
+          "views": 3535,
+          "path": "/docs/campaigns"
+        }
+      ]
+    }
+  },
+  "range": {
+    "start": "2025-01-01",
+    "end": "2026-01-01",
+    "days": 365
+  },
+  "limit": 10
+}

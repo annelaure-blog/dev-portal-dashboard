@@ -1,0 +1,141 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        {
+          "term": "capout",
+          "count": 31
+        },
+        {
+          "term": "keyword",
+          "count": 24
+        },
+        {
+          "term": "catalog",
+          "count": 22
+        },
+        {
+          "term": "creative",
+          "count": 21
+        },
+        {
+          "term": "product",
+          "count": 19
+        },
+        {
+          "term": "report",
+          "count": 18
+        },
+        {
+          "term": "revenue",
+          "count": 16
+        },
+        {
+          "term": "preferred",
+          "count": 15
+        },
+        {
+          "term": "fill rate",
+          "count": 13
+        },
+        {
+          "term": "pacing",
+          "count": 12
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "item-whitelist",
+          "count": 18
+        },
+        {
+          "term": "filter",
+          "count": 16
+        },
+        {
+          "term": "spotlight",
+          "count": 14
+        },
+        {
+          "term": "video",
+          "count": 14
+        },
+        {
+          "term": "nolog",
+          "count": 13
+        },
+        {
+          "term": "trackTransaction",
+          "count": 10
+        },
+        {
+          "term": "user agent",
+          "count": 10
+        },
+        {
+          "term": "beacons",
+          "count": 10
+        },
+        {
+          "term": "retailer-visitor-id",
+          "count": 9
+        },
+        {
+          "term": "okhttp",
+          "count": 8
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "scope",
+          "count": 10
+        },
+        {
+          "term": "adset",
+          "count": 10
+        },
+        {
+          "term": "sdk",
+          "count": 8
+        },
+        {
+          "term": "event",
+          "count": 8
+        },
+        {
+          "term": "consent",
+          "count": 8
+        },
+        {
+          "term": "realtime",
+          "count": 8
+        },
+        {
+          "term": "currency",
+          "count": 8
+        },
+        {
+          "term": "product filter",
+          "count": 8
+        },
+        {
+          "term": "report",
+          "count": 7
+        },
+        {
+          "term": "tracking",
+          "count": 7
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
