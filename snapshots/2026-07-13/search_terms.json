@@ -1,0 +1,141 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "items": [
+        {
+          "term": "capout",
+          "count": 29
+        },
+        {
+          "term": "creative",
+          "count": 25
+        },
+        {
+          "term": "keyword",
+          "count": 24
+        },
+        {
+          "term": "product",
+          "count": 19
+        },
+        {
+          "term": "report",
+          "count": 18
+        },
+        {
+          "term": "revenue",
+          "count": 16
+        },
+        {
+          "term": "catalog",
+          "count": 16
+        },
+        {
+          "term": "in-review-report",
+          "count": 15
+        },
+        {
+          "term": "campaign",
+          "count": 14
+        },
+        {
+          "term": "preferred",
+          "count": 13
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "item-whitelist",
+          "count": 16
+        },
+        {
+          "term": "video",
+          "count": 14
+        },
+        {
+          "term": "filter",
+          "count": 14
+        },
+        {
+          "term": "nolog",
+          "count": 13
+        },
+        {
+          "term": "user agent",
+          "count": 10
+        },
+        {
+          "term": "beacons",
+          "count": 10
+        },
+        {
+          "term": "filters",
+          "count": 10
+        },
+        {
+          "term": "placement-id",
+          "count": 10
+        },
+        {
+          "term": "regionId",
+          "count": 8
+        },
+        {
+          "term": "dsa",
+          "count": 8
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "scope",
+          "count": 10
+        },
+        {
+          "term": "adset",
+          "count": 8
+        },
+        {
+          "term": "consent",
+          "count": 8
+        },
+        {
+          "term": "realtime",
+          "count": 8
+        },
+        {
+          "term": "sdk",
+          "count": 8
+        },
+        {
+          "term": "product filter",
+          "count": 8
+        },
+        {
+          "term": "event",
+          "count": 8
+        },
+        {
+          "term": "report",
+          "count": 7
+        },
+        {
+          "term": "Current rate limit is 100 calls per minute per App.",
+          "count": 6
+        },
+        {
+          "term": "client_id",
+          "count": 6
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
