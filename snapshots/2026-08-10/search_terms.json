@@ -1,0 +1,101 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "error": "401 Client Error: Unauthorized for url: https://metrics.readme.io/v2/search/top-search-terms?rangeLength=90&limit=10",
+      "body": "{\"status\":\"Unauthorized\",\"message\":\"We couldn't find your API key.\"}"
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "item-whitelist",
+          "count": 12
+        },
+        {
+          "term": "filters",
+          "count": 10
+        },
+        {
+          "term": "video",
+          "count": 10
+        },
+        {
+          "term": "beacons",
+          "count": 10
+        },
+        {
+          "term": "user agent",
+          "count": 10
+        },
+        {
+          "term": "placement-id",
+          "count": 10
+        },
+        {
+          "term": "page-number",
+          "count": 8
+        },
+        {
+          "term": "dsa",
+          "count": 8
+        },
+        {
+          "term": "okhttp",
+          "count": 8
+        },
+        {
+          "term": "filter",
+          "count": 8
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "scope",
+          "count": 10
+        },
+        {
+          "term": "product filter",
+          "count": 8
+        },
+        {
+          "term": "realtime",
+          "count": 8
+        },
+        {
+          "term": "adset",
+          "count": 8
+        },
+        {
+          "term": "Current rate limit is 100 calls per minute per App.",
+          "count": 6
+        },
+        {
+          "term": "report",
+          "count": 6
+        },
+        {
+          "term": "conversions",
+          "count": 6
+        },
+        {
+          "term": "timezone",
+          "count": 6
+        },
+        {
+          "term": "instream",
+          "count": 5
+        },
+        {
+          "term": "bid",
+          "count": 5
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
