@@ -1,0 +1,101 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "error": "401 Client Error: Unauthorized for url: https://metrics.readme.io/v2/search/top-search-terms?rangeLength=90&limit=10",
+      "body": "{\"status\":\"Unauthorized\",\"message\":\"We couldn't find your API key.\"}"
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "item-whitelist",
+          "count": 10
+        },
+        {
+          "term": "dsa",
+          "count": 8
+        },
+        {
+          "term": "page-number",
+          "count": 8
+        },
+        {
+          "term": "user agent",
+          "count": 6
+        },
+        {
+          "term": "placement-id",
+          "count": 6
+        },
+        {
+          "term": "order",
+          "count": 4
+        },
+        {
+          "term": "d.us.criteo.com",
+          "count": 4
+        },
+        {
+          "term": "regionId",
+          "count": 4
+        },
+        {
+          "term": "deduplica",
+          "count": 4
+        },
+        {
+          "term": "onBasketChangeBeacon",
+          "count": 4
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "product filter",
+          "count": 8
+        },
+        {
+          "term": "SalesAllPc1d",
+          "count": 5
+        },
+        {
+          "term": "user",
+          "count": 4
+        },
+        {
+          "term": "https://consent.criteo.com",
+          "count": 4
+        },
+        {
+          "term": "marketing-solutions",
+          "count": 4
+        },
+        {
+          "term": "report",
+          "count": 4
+        },
+        {
+          "term": "statistics/report",
+          "count": 4
+        },
+        {
+          "term": "/advertisers/me",
+          "count": 4
+        },
+        {
+          "term": "advertisers/me",
+          "count": 4
+        },
+        {
+          "term": "contact list",
+          "count": 4
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
