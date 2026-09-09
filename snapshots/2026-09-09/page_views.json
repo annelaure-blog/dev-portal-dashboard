@@ -1,0 +1,34 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "error": "401 Client Error: Unauthorized for url: https://metrics.readme.io/v2/pageview/total?project=retail-media&resolution=day&rangeStart=2026-08-10&rangeEnd=2026-09-09"
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "views": {
+        "30": 29,
+        "90": 11132,
+        "365": 111830
+      }
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "views": {
+        "30": 34,
+        "90": 25623,
+        "365": 265032
+      }
+    }
+  },
+  "windows": [
+    30,
+    90,
+    365
+  ],
+  "totals": {
+    "30": 63,
+    "90": 36755,
+    "365": 376862
+  }
+}
