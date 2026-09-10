@@ -1,0 +1,101 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "error": "401 Client Error: Unauthorized for url: https://metrics.readme.io/v2/search/top-search-terms?rangeLength=90&limit=10",
+      "body": "{\"status\":\"Unauthorized\",\"message\":\"We couldn't find your API key.\"}"
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "dsa",
+          "count": 8
+        },
+        {
+          "term": "placement-id",
+          "count": 6
+        },
+        {
+          "term": "user agent",
+          "count": 6
+        },
+        {
+          "term": "onBasketChangeBeacon",
+          "count": 4
+        },
+        {
+          "term": "order",
+          "count": 4
+        },
+        {
+          "term": "item-whitelist",
+          "count": 4
+        },
+        {
+          "term": "event",
+          "count": 4
+        },
+        {
+          "term": "d.us.criteo.com",
+          "count": 4
+        },
+        {
+          "term": "view",
+          "count": 4
+        },
+        {
+          "term": "filter",
+          "count": 4
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "product filter",
+          "count": 8
+        },
+        {
+          "term": "report",
+          "count": 4
+        },
+        {
+          "term": "ROAS",
+          "count": 4
+        },
+        {
+          "term": "statistics/report",
+          "count": 4
+        },
+        {
+          "term": "preview",
+          "count": 3
+        },
+        {
+          "term": "roas",
+          "count": 3
+        },
+        {
+          "term": "adset",
+          "count": 3
+        },
+        {
+          "term": "instream",
+          "count": 3
+        },
+        {
+          "term": "video",
+          "count": 2
+        },
+        {
+          "term": "audience-segment-id",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
