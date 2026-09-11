@@ -1,0 +1,124 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "error": "401 Client Error: Unauthorized for url: https://metrics.readme.io/v2/pageview/top?rangeStart=2025-01-01&rangeEnd=2026-01-01&resolution=day&limit=10"
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "title": "/docs/api-parameters-1",
+          "views": 2229,
+          "path": "/docs/api-parameters-1"
+        },
+        {
+          "title": "/docs/whats-new",
+          "views": 2080,
+          "path": "/docs/whats-new"
+        },
+        {
+          "title": "/docs/product-feed-parameters",
+          "views": 1944,
+          "path": "/docs/product-feed-parameters"
+        },
+        {
+          "title": "/docs/api-calls",
+          "views": 1808,
+          "path": "/docs/api-calls"
+        },
+        {
+          "title": "/docs/overview",
+          "views": 1127,
+          "path": "/docs/overview"
+        },
+        {
+          "title": "/docs/product-upload-guide",
+          "views": 1022,
+          "path": "/docs/product-upload-guide"
+        },
+        {
+          "title": "/docs/format-overview",
+          "views": 983,
+          "path": "/docs/format-overview"
+        },
+        {
+          "title": "/docs/api-responses",
+          "views": 975,
+          "path": "/docs/api-responses"
+        },
+        {
+          "title": "/docs/beacon-types",
+          "views": 875,
+          "path": "/docs/beacon-types"
+        },
+        {
+          "title": "/docs/commerce-display-formats",
+          "views": 840,
+          "path": "/docs/commerce-display-formats"
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "title": "/docs/welcome-to-criteo",
+          "views": 7652,
+          "path": "/docs/welcome-to-criteo"
+        },
+        {
+          "title": "/reference/apiv1oauth2tokenpost",
+          "views": 4018,
+          "path": "/reference/apiv1oauth2tokenpost"
+        },
+        {
+          "title": "/docs/analytics",
+          "views": 3173,
+          "path": "/docs/analytics"
+        },
+        {
+          "title": "/docs/campaign-statistics",
+          "views": 2807,
+          "path": "/docs/campaign-statistics"
+        },
+        {
+          "title": "/docs/onboarding-checklist",
+          "views": 2410,
+          "path": "/docs/onboarding-checklist"
+        },
+        {
+          "title": "/changelog",
+          "views": 2290,
+          "path": "/changelog"
+        },
+        {
+          "title": "/docs/campaigns",
+          "views": 1942,
+          "path": "/docs/campaigns"
+        },
+        {
+          "title": "/docs/authentication",
+          "views": 1606,
+          "path": "/docs/authentication"
+        },
+        {
+          "title": "/docs/advertisers",
+          "views": 1577,
+          "path": "/docs/advertisers"
+        },
+        {
+          "title": "/docs/audiences",
+          "views": 1407,
+          "path": "/docs/audiences"
+        }
+      ]
+    }
+  },
+  "range": {
+    "start": "2025-01-01",
+    "end": "2026-01-01",
+    "days": 365
+  },
+  "limit": 10
+}
