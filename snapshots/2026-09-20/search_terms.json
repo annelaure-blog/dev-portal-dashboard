@@ -1,0 +1,101 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "error": "401 Client Error: Unauthorized for url: https://metrics.readme.io/v2/search/top-search-terms?rangeLength=90&limit=10",
+      "body": "{\"status\":\"Unauthorized\",\"message\":\"We couldn't find your API key.\"}"
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "dsa",
+          "count": 8
+        },
+        {
+          "term": "placement-id",
+          "count": 6
+        },
+        {
+          "term": "filter",
+          "count": 4
+        },
+        {
+          "term": "view",
+          "count": 4
+        },
+        {
+          "term": "event",
+          "count": 4
+        },
+        {
+          "term": "order",
+          "count": 4
+        },
+        {
+          "term": "offline sales",
+          "count": 3
+        },
+        {
+          "term": "Criteo User ID",
+          "count": 2
+        },
+        {
+          "term": "X-Forwarded-For",
+          "count": 2
+        },
+        {
+          "term": "beacon sdk v5",
+          "count": 2
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "product filter",
+          "count": 6
+        },
+        {
+          "term": " /marketplace-performance-outcomes/campaigns",
+          "count": 2
+        },
+        {
+          "term": "New to brand attributed units",
+          "count": 2
+        },
+        {
+          "term": "RevenueGeneratedClientAttribution",
+          "count": 2
+        },
+        {
+          "term": "statistics/report",
+          "count": 2
+        },
+        {
+          "term": "/statistics/report",
+          "count": 2
+        },
+        {
+          "term": "Sponsored Products",
+          "count": 2
+        },
+        {
+          "term": "update contact list",
+          "count": 2
+        },
+        {
+          "term": "delivery/retailmedia",
+          "count": 2
+        },
+        {
+          "term": "endpoint marketing",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
