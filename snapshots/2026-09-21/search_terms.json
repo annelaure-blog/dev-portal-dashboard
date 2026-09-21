@@ -1,0 +1,101 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "error": "401 Client Error: Unauthorized for url: https://metrics.readme.io/v2/search/top-search-terms?rangeLength=90&limit=10",
+      "body": "{\"status\":\"Unauthorized\",\"message\":\"We couldn't find your API key.\"}"
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "placement-id",
+          "count": 6
+        },
+        {
+          "term": "dsa",
+          "count": 6
+        },
+        {
+          "term": "filter",
+          "count": 4
+        },
+        {
+          "term": "view",
+          "count": 4
+        },
+        {
+          "term": "event",
+          "count": 4
+        },
+        {
+          "term": "order",
+          "count": 4
+        },
+        {
+          "term": "offline sales",
+          "count": 3
+        },
+        {
+          "term": "trackTransaction",
+          "count": 2
+        },
+        {
+          "term": "X-Forwarded-For",
+          "count": 2
+        },
+        {
+          "term": "description",
+          "count": 2
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "Real Time Statistics",
+          "count": 2
+        },
+        {
+          "term": "ProductImporter API",
+          "count": 2
+        },
+        {
+          "term": "account id",
+          "count": 2
+        },
+        {
+          "term": "out of stock",
+          "count": 2
+        },
+        {
+          "term": "inventory",
+          "count": 2
+        },
+        {
+          "term": "New to brand attributed units",
+          "count": 2
+        },
+        {
+          "term": "delivery/retailmedia",
+          "count": 2
+        },
+        {
+          "term": "response time",
+          "count": 2
+        },
+        {
+          "term": "realtime ",
+          "count": 2
+        },
+        {
+          "term": "permission",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
