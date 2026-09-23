@@ -1,0 +1,101 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "error": "401 Client Error: Unauthorized for url: https://metrics.readme.io/v2/search/top-search-terms?rangeLength=90&limit=10",
+      "body": "{\"status\":\"Unauthorized\",\"message\":\"We couldn't find your API key.\"}"
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": [
+        {
+          "term": "dsa",
+          "count": 6
+        },
+        {
+          "term": "placement-id",
+          "count": 6
+        },
+        {
+          "term": "view",
+          "count": 4
+        },
+        {
+          "term": "event",
+          "count": 4
+        },
+        {
+          "term": "order",
+          "count": 4
+        },
+        {
+          "term": "offline sales",
+          "count": 3
+        },
+        {
+          "term": "description",
+          "count": 2
+        },
+        {
+          "term": "batch",
+          "count": 2
+        },
+        {
+          "term": "inte",
+          "count": 2
+        },
+        {
+          "term": "filters",
+          "count": 2
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": [
+        {
+          "term": "ld.js",
+          "count": 2
+        },
+        {
+          "term": "Agent",
+          "count": 2
+        },
+        {
+          "term": "batch",
+          "count": 2
+        },
+        {
+          "term": "reco",
+          "count": 2
+        },
+        {
+          "term": "statistics/report",
+          "count": 2
+        },
+        {
+          "term": "timeout",
+          "count": 2
+        },
+        {
+          "term": "event",
+          "count": 2
+        },
+        {
+          "term": "Sponsored Products",
+          "count": 2
+        },
+        {
+          "term": "delivery/retailmedia",
+          "count": 2
+        },
+        {
+          "term": "endpoint marketing",
+          "count": 2
+        }
+      ]
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
