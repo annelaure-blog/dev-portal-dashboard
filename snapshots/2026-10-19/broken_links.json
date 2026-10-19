@@ -1,0 +1,533 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "branch": "v2026.01",
+      "extracted_links": 116,
+      "checked_links": 30,
+      "external_links": 85,
+      "broken": [
+        "https://developers.criteo.com/retail-media/reference/apiv1oauth2tokenpost",
+        "https://developers.criteo.com/retail-media/v2025-preview/docs/audience-segments",
+        "https://developers.criteo.com/retail-media/v2025-preview/docs/authorization-requests"
+      ],
+      "broken_detail": [
+        {
+          "url": "https://developers.criteo.com/retail-media/reference/apiv1oauth2tokenpost",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "escalation-guidelines"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media/v2025-preview/docs/audience-segments",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "audience-segment-endpoints"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media/v2025-preview/docs/authorization-requests",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "account-fees"
+          ]
+        }
+      ],
+      "broken_external": [
+        "docs:retailers",
+        "https://api.criteo.com/retail-media/swagger/docs/v.1.0",
+        "https://en.wikipedia.org/wiki/Exponential_backoff",
+        "https://en.wikipedia.org/wiki/ISO_8601",
+        "https://en.wikipedia.org/wiki/JSON_streaming",
+        "https://help.retailmedia.criteo.com/kb/guide/en/campaign-attribution-settings-kOp98ICINU/Steps/878890",
+        "https://search.maven.org/search?q=a:criteo-api-retailmedia-sdk",
+        "https://www.criteo.com/criteo-privacy-guidelines-for-clients-and-publisher-partners/"
+      ],
+      "broken_external_detail": [
+        {
+          "url": "docs:retailers",
+          "status": "error",
+          "detail": "No connection adapters were found for 'docs:retailers'",
+          "sources": [
+            "sellers"
+          ]
+        },
+        {
+          "url": "https://api.criteo.com/retail-media/swagger/docs/v.1.0",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "page-style"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Exponential_backoff",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "api-troubleshooting-guide"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ISO_8601",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "audience-endpoints",
+            "audience-segment-endpoints",
+            "audience-segment-endpoints-copy",
+            "campaigns-endpoints",
+            "catalog-endpoints",
+            "keywords",
+            "page-style",
+            "revenue-report-ssp"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/JSON_streaming",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "catalog-endpoints"
+          ]
+        },
+        {
+          "url": "https://help.retailmedia.criteo.com/kb/guide/en/campaign-attribution-settings-kOp98ICINU/Steps/878890",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "metrics-and-dimensions"
+          ]
+        },
+        {
+          "url": "https://search.maven.org/search?q=a:criteo-api-retailmedia-sdk",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "api-client-libraries"
+          ]
+        },
+        {
+          "url": "https://www.criteo.com/criteo-privacy-guidelines-for-clients-and-publisher-partners/",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "criteo-api-terms-and-conditions"
+          ]
+        }
+      ]
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "branch": "v2026.01",
+      "extracted_links": 160,
+      "checked_links": 39,
+      "external_links": 110,
+      "broken": [
+        "https://developers.criteo.com/retailer-integration/docs/commerce-video-spotlight-japanese",
+        "https://developers.criteo.com/retailer-integration/docs/feed-parameters#filters",
+        "https://developers.criteo.com/retailer-integration/docs/feed-parameters#regional-data",
+        "https://developers.criteo.com/retailer-integration/docs/format-overview-japanese",
+        "https://developers.criteo.com/retailer-integration/edit/video-player-implementation-app-ios-korean",
+        "https://developers.criteo.com/retailer-integration/v1.1/docs/gam-overview",
+        "https://developers.criteo.com/retailer-integration/v1.1/docs/offsite-for-hybrid-apps#full-example",
+        "https://developers.criteo.com/retailer-integration/v1.1/docs/onetag-for-offsite",
+        "https://developers.criteo.com/retailer-integration/v1.1/docs/product-feed-parameters",
+        "https://developers.criteo.com/retailer-integration/video-player-implementation-app-ios-japanese"
+      ],
+      "broken_detail": [
+        {
+          "url": "https://developers.criteo.com/retailer-integration/docs/commerce-video-spotlight-japanese",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "api-response-structure-japanese"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retailer-integration/docs/feed-parameters#filters",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "onetag"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retailer-integration/docs/feed-parameters#regional-data",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "onetag"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retailer-integration/docs/format-overview-japanese",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "api-response-structure-japanese"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retailer-integration/edit/video-player-implementation-app-ios-korean",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "video-player-implementation-app-android-korean"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retailer-integration/v1.1/docs/gam-overview",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "overview"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retailer-integration/v1.1/docs/offsite-for-hybrid-apps#full-example",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "onetag-offsite-for-hybrid-apps"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retailer-integration/v1.1/docs/onetag-for-offsite",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "onetag-offsite-for-hybrid-apps"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retailer-integration/v1.1/docs/product-feed-parameters",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "dataset-parameters"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retailer-integration/video-player-implementation-app-ios-japanese",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "video-player-implementation-appandroid-japanese"
+          ]
+        }
+      ],
+      "broken_external": [
+        "https://dash.readme.com/project/retail-media-delivery/v1.0/docs/branded-header",
+        "https://dash.readme.com/project/retail-media-delivery/v1.0/docs/integration-process",
+        "https://dash.readme.com/project/retail-media-delivery/v1.1/docs/video-player-implementation-appandroid-japanese",
+        "https://developers.criteo.com/retail-media-delivery/docs/feed-parameters",
+        "https://developers.criteo.com/retail-media-delivery/docs/feed-parameters#item_group_id",
+        "https://developers.criteo.com/retail-media-delivery/docs/introduction",
+        "https://developers.criteo.com/retail-media-delivery/docs/retail-media-beacons",
+        "https://developers.criteo.com/retail-media-delivery/docs/video-player-implementation-app-android-japanese",
+        "https://developers.criteo.com/retail-media-delivery/docs/video-player-implementation-guide-desktopmobile-japanese",
+        "https://developers.criteo.com/retail-media-delivery/docs/video-player-implementation-guide-desktopmobile-korean",
+        "https://developers.criteo.com/retail-media-delivery/docs/video-player-implementation-guide-desktopmobile-korean#step-4-additional-verification-with-omid-compatible-scripts-video-views",
+        "https://developers.criteo.com/retail-media-delivery/docs/video-player-specifications-japanese",
+        "https://developers.criteo.com/retail-media-delivery/docs/video-player-specifications-korean",
+        "https://en.wikipedia.org/wiki/ISO_4217",
+        "https://gitlab.crto.in/l.cicone/vast-omid-player-demo-ios",
+        "https://www.bestbuy.com",
+        "https://www.bestbuy.com/site/home-audio-systems/speakers/abcat0205000.c?id=abcat0205000",
+        "https://www.example.com/product-page",
+        "https://www.iab.com/guidelines/vast/",
+        "https://www.monetizemore.com/blog/google-ad-manager-advanced-troubleshooting-guide-for-display-ads/"
+      ],
+      "broken_external_detail": [
+        {
+          "url": "https://dash.readme.com/project/retail-media-delivery/v1.0/docs/branded-header",
+          "status": "401",
+          "detail": "Unauthorized",
+          "sources": [
+            "flagship"
+          ]
+        },
+        {
+          "url": "https://dash.readme.com/project/retail-media-delivery/v1.0/docs/integration-process",
+          "status": "401",
+          "detail": "Unauthorized",
+          "sources": [
+            "get-started-with-commerce-onsite-video-korean"
+          ]
+        },
+        {
+          "url": "https://dash.readme.com/project/retail-media-delivery/v1.1/docs/video-player-implementation-appandroid-japanese",
+          "status": "401",
+          "detail": "Unauthorized",
+          "sources": [
+            "get-started-commerce-video-japanese"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media-delivery/docs/feed-parameters",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "onetag-for-existing-cms-retailer"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media-delivery/docs/feed-parameters#item_group_id",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "favorites-page"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media-delivery/docs/introduction",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "overview"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media-delivery/docs/retail-media-beacons",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "sponsored-products"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media-delivery/docs/video-player-implementation-app-android-japanese",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "video-player-implementation-app-ios-japanese"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media-delivery/docs/video-player-implementation-guide-desktopmobile-japanese",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "get-started-commerce-video-japanese",
+            "tracking-ad-related-activity-japanese",
+            "video-player-implementation-app-ios-japanese",
+            "video-player-implementation-appandroid-japanese",
+            "video-player-specification-japanese"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media-delivery/docs/video-player-implementation-guide-desktopmobile-korean",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "get-started-with-commerce-onsite-video-korean",
+            "video-player-implementation-app-android-korean",
+            "video-player-implementation-app-ios-korean"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media-delivery/docs/video-player-implementation-guide-desktopmobile-korean#step-4-additional-verification-with-omid-compatible-scripts-video-views",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "get-started-with-commerce-onsite-video-korean"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media-delivery/docs/video-player-specifications-japanese",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "get-started-commerce-video-japanese"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/retail-media-delivery/docs/video-player-specifications-korean",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "get-started-with-commerce-onsite-video-korean"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ISO_4217",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "order-confirmation-page"
+          ]
+        },
+        {
+          "url": "https://gitlab.crto.in/l.cicone/vast-omid-player-demo-ios",
+          "status": "error",
+          "detail": "HTTPSConnectionPool(host='gitlab.crto.in', port=443): Max retries exceeded with url: /l.cicone/vast-omid-player-demo-ios (Caused by NameResolutionError(\"<urllib3.connection.HTTPSConnection object at 0x108a1ead0>: Failed to resolve 'gitlab.crto.in' ([Errno 8] nodename nor servname provided, or not known)\"))",
+          "sources": [
+            "video-player-implementation-app-ios-copy"
+          ]
+        },
+        {
+          "url": "https://www.bestbuy.com",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "google-publisher-tag-gpt"
+          ]
+        },
+        {
+          "url": "https://www.bestbuy.com/site/home-audio-systems/speakers/abcat0205000.c?id=abcat0205000",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "google-publisher-tag-gpt"
+          ]
+        },
+        {
+          "url": "https://www.example.com/product-page",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "beacon-sdk"
+          ]
+        },
+        {
+          "url": "https://www.iab.com/guidelines/vast/",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "video-player-specification-japanese",
+            "video-player-specification-korean",
+            "video-player-specifications"
+          ]
+        },
+        {
+          "url": "https://www.monetizemore.com/blog/google-ad-manager-advanced-troubleshooting-guide-for-display-ads/",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "google-publisher-tag-gpt"
+          ]
+        }
+      ]
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "branch": "v2026.01",
+      "extracted_links": 93,
+      "checked_links": 17,
+      "external_links": 35,
+      "broken": [
+        "https://developers.criteo.com/marketing-solutions/reference-link/apiportfolioget",
+        "https://developers.criteo.com/marketing-solutions/reference/apiportfolioget",
+        "https://developers.criteo.com/marketing-solutions/v2025.10/docs/product-importer-api"
+      ],
+      "broken_detail": [
+        {
+          "url": "https://developers.criteo.com/marketing-solutions/reference-link/apiportfolioget",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "api-troubleshooting-tips"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/marketing-solutions/reference/apiportfolioget",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "start-using-your-api-connection"
+          ]
+        },
+        {
+          "url": "https://developers.criteo.com/marketing-solutions/v2025.10/docs/product-importer-api",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "managing-sellers"
+          ]
+        }
+      ],
+      "broken_external": [
+        "https://api.criteo.com/\\{'\\{version}'}/marketing-solutions/marketplace-performance-outcomes/stats",
+        "https://blog.postman.com/announcing-postman-for-the-web-now-in-open-beta/",
+        "https://en.wikipedia.org/wiki/Exponential_backoff",
+        "https://en.wikipedia.org/wiki/ISO_4217",
+        "https://en.wikipedia.org/wiki/ISO_8601",
+        "https://search.maven.org/artifact/com.criteo/criteo-api-commercegrid-sdk",
+        "https://search.maven.org/artifact/com.criteo/criteo-api-marketingsolutions-sdk",
+        "https://www.criteo.com/criteo-privacy-guidelines-for-clients-and-publisher-partners/"
+      ],
+      "broken_external_detail": [
+        {
+          "url": "https://api.criteo.com/\\{'\\{version}'}/marketing-solutions/marketplace-performance-outcomes/stats",
+          "status": "404",
+          "detail": "Not Found",
+          "sources": [
+            "copy-of-getting-statistics"
+          ]
+        },
+        {
+          "url": "https://blog.postman.com/announcing-postman-for-the-web-now-in-open-beta/",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "use-postman-with-the-criteo-marketing-solutions-api"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/Exponential_backoff",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "api-troubleshooting-tips"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ISO_4217",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "placement"
+          ]
+        },
+        {
+          "url": "https://en.wikipedia.org/wiki/ISO_8601",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "commerce-grid-audience-segments-endpoints"
+          ]
+        },
+        {
+          "url": "https://search.maven.org/artifact/com.criteo/criteo-api-commercegrid-sdk",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "api-client-libraries"
+          ]
+        },
+        {
+          "url": "https://search.maven.org/artifact/com.criteo/criteo-api-marketingsolutions-sdk",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "api-client-libraries"
+          ]
+        },
+        {
+          "url": "https://www.criteo.com/criteo-privacy-guidelines-for-clients-and-publisher-partners/",
+          "status": "403",
+          "detail": "Forbidden",
+          "sources": [
+            "criteo-api-terms-and-conditions"
+          ]
+        }
+      ]
+    }
+  },
+  "scanned": 86
+}
