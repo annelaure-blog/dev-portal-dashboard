@@ -1,0 +1,19 @@
+{
+  "projects": {
+    "retail-media": {
+      "label": "Retail Media API",
+      "error": "401 Client Error: Unauthorized for url: https://metrics.readme.io/v2/search/top-search-terms?rangeLength=90&limit=10",
+      "body": "{\"status\":\"Unauthorized\",\"message\":\"We couldn't find your API key.\"}"
+    },
+    "retailer-integration": {
+      "label": "Retailer Integration",
+      "items": []
+    },
+    "marketing-solutions": {
+      "label": "Marketing Solutions API",
+      "items": []
+    }
+  },
+  "limit": 10,
+  "rangeLength": 90
+}
